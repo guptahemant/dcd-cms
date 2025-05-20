@@ -1,0 +1,46 @@
+uuid: 358a4f0a-f33b-44e8-bf3b-b735683b1ac1
+langcode: en-gb
+status: true
+dependencies: {  }
+id: submit_a_session
+title: 'Submit a session'
+webform: submit_a_session
+content_type: null
+field_title: null
+use_encrypt: null
+encryption_profile: null
+redirect_to_entity: false
+redirect_to_entity_message: ''
+redirect_to_entity_message_on_update: '0'
+sync_unique: false
+sync_content: true
+sync_content_delete: false
+sync_content_field: field_submission_id
+sync_content_node_field: null
+target_bundle: papers
+target_entity_type: node
+elements:
+  field_description:
+    type: false
+    mapping: default_mapping
+    webform_field: description
+    custom_check: 0
+    custom_value: ''
+  field_submission_id:
+    type: true
+    mapping: text_mapping
+    webform_field: uuid
+    custom_check: 0
+    custom_value: ''
+  field_track:
+    type: false
+    mapping: default_mapping
+    webform_field: track
+    custom_check: 0
+    custom_value: ''
+  title:
+    type: false
+    mapping: text_mapping
+    webform_field: title
+    custom_check: 0
+    custom_value: ''

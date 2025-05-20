@@ -1,34 +1,22 @@
-uuid: 450e24fc-c847-43eb-894d-15ca5e0f91c1
-langcode: en
+uuid: be2afbf5-0555-4d50-9214-7132cf67ae8d
+langcode: en-gb
 status: true
 dependencies:
   config:
-    - filter.format.content_format
-    - media.type.document
-    - media.type.image
-    - media.type.remote_video
-    - media.type.svg_image
-    - node.type.blog
-    - node.type.event
+    - node.type.article
     - node.type.page
-    - node.type.person
-    - workflows.workflow.basic_editorial
+    - taxonomy.vocabulary.tags
   module:
-    - content_moderation
+    - comment
     - contextual
     - file
-    - filter
-    - media
-    - navigation
     - node
     - path
-    - redirect
-    - scheduler
     - system
+    - taxonomy
     - toolbar
-    - trash
 _core:
-  default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
 id: content_editor
 label: 'Content editor'
 weight: 2
@@ -37,52 +25,23 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
-  - 'access media overview'
-  - 'access navigation'
+  - 'access files overview'
   - 'access toolbar'
-  - 'access trash'
-  - 'administer menu'
-  - 'administer redirects'
   - 'administer url aliases'
-  - 'create blog content'
-  - 'create document media'
-  - 'create event content'
-  - 'create image media'
+  - 'create article content'
   - 'create page content'
-  - 'create person content'
-  - 'create remote_video media'
-  - 'create svg_image media'
+  - 'create terms in tags'
   - 'create url aliases'
-  - 'delete any blog content'
-  - 'delete any document media'
-  - 'delete any event content'
-  - 'delete any image media'
-  - 'delete any page content'
-  - 'delete any person content'
-  - 'delete any remote_video media'
-  - 'delete any svg_image media'
-  - 'delete blog revisions'
-  - 'delete event revisions'
+  - 'delete article revisions'
+  - 'delete own article content'
   - 'delete own files'
+  - 'delete own page content'
   - 'delete page revisions'
-  - 'delete person revisions'
-  - 'edit any blog content'
-  - 'edit any document media'
-  - 'edit any event content'
-  - 'edit any image media'
-  - 'edit any page content'
-  - 'edit any person content'
-  - 'edit any remote_video media'
-  - 'edit any svg_image media'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
   - 'revert all revisions'
-  - 'schedule publishing of nodes'
-  - 'use basic_editorial transition create_new_draft'
-  - 'use basic_editorial transition publish'
-  - 'use basic_editorial transition unpublish'
-  - 'use text format content_format'
   - 'view all revisions'
-  - 'view any unpublished content'
   - 'view own unpublished content'
-  - 'view own unpublished media'
-  - 'view scheduled content'
   - 'view the administration theme'

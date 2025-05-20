@@ -1,0 +1,29 @@
+uuid: 4dbc90d2-bacf-438f-bcb0-bf1648d13284
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_track
+    - node.type.papers
+    - taxonomy.vocabulary.tags
+id: node.papers.field_track
+field_name: field_track
+entity_type: node
+bundle: papers
+label: Track
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
