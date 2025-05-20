@@ -1,0 +1,11 @@
+uuid: d2e7aab2-cd2b-4b0f-be84-89797c7e8cee
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.papers
+id: node.papers
+target_entity_type_id: node
+target_bundle: papers
+default_langcode: site_default
+language_alterable: false

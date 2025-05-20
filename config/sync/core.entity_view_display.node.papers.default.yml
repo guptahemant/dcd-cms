@@ -1,0 +1,47 @@
+uuid: 1459ec77-a683-490c-876b-1a2fe3f70e78
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.papers.field_description
+    - field.field.node.papers.field_submission_id
+    - field.field.node.papers.field_track
+    - node.type.papers
+  module:
+    - text
+    - user
+id: node.papers.default
+targetEntityType: node
+bundle: papers
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_submission_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_track:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

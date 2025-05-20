@@ -1,0 +1,21 @@
+uuid: f6bb7296-c45d-43d1-8a31-9a7a9a5de42b
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - registration
+id: registration_settings.field_title
+field_name: field_title
+entity_type: registration_settings
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+uuid: e0cf9c02-aee0-4a0f-8451-2a6c20ce2670
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Papers
+type: papers
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

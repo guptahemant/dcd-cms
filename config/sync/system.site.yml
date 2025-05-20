@@ -1,15 +1,15 @@
 _core:
-  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
-langcode: en
-uuid: f2f970de-1c74-4fde-a0cc-cb314087086e
-name: Drupal
-mail: ''
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en-gb
+uuid: 3889a121-10d4-4d71-a1c5-9a3f09a04254
+name: dcd
+mail: anushrikumari19@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
-default_langcode: en
+default_langcode: en-gb
 mail_notification: null
