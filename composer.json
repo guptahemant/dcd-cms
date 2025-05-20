@@ -17,9 +17,12 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "drupal/admin_toolbar": "^3.5",
+        "drupal/backup_migrate": "^5.1",
         "drupal/core-composer-scaffold": "^11.1.4",
         "drupal/core-project-message": "^11.1.4",
         "drupal/core-recommended": "^11.1.4",
+        "drupal/devel_php": "^1.7",
         "drupal/drupal_cms_accessibility_tools": "~1.1.0",
         "drupal/drupal_cms_ai": "~1.1.0",
         "drupal/drupal_cms_analytics": "~1.1.0",
@@ -35,7 +38,9 @@
         "drupal/drupal_cms_starter": "~1.1.0",
         "drupal/project_browser": "@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
-        "drupal/webform": "@beta",
+        "drupal/registration": "^3.4",
+        "drupal/webform": "^6.3@beta",
+        "drupal/webform_content_creator": "^4.0",
         "drush/drush": "^13"
     },
     "conflict": {
