@@ -1,0 +1,8 @@
+uuid: bb703723-49a7-4cdc-8038-dd1adb7ae6df
+langcode: en
+status: true
+dependencies: {  }
+id: text_block
+label: 'Text Block'
+revision: false
+description: 'This is text block component with Title and block fields.'
