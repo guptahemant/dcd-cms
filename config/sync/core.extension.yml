@@ -23,6 +23,7 @@ module:
   content_moderation_notifications: 0
   contextual: 0
   crop: 0
+  csv_serialization: 0
   dashboard: 0
   date_augmenter: 0
   datetime: 0
@@ -89,6 +90,7 @@ module:
   redirect: 0
   redirect_404: 0
   responsive_image: 0
+  rest: 0
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
@@ -107,6 +109,8 @@ module:
   trash: 0
   update: 0
   user: 0
+  views_bulk_operations: 0
+  views_data_export: 0
   views_ui: 0
   workflows: 0
   eca_form: 1
