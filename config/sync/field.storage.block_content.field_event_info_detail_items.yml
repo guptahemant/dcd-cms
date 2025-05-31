@@ -1,17 +1,15 @@
-uuid: 1c7ca770-dc92-49b6-8823-078787a92664
+uuid: 259f0c5e-ed2a-4698-b502-753448b57a51
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_title
-field_name: field_title
+id: block_content.field_event_info_detail_items
+field_name: field_event_info_detail_items
 entity_type: block_content
-type: string
+type: string_long
 settings:
-  max_length: 255
   case_sensitive: false
-  is_ascii: false
 module: core
 locked: false
 cardinality: 1

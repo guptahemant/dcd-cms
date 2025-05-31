@@ -1,0 +1,56 @@
+uuid: 07b48726-0f35-454a-8c83-9689bb443ca4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.field.block_content.hero_banner.body
+    - field.field.block_content.hero_banner.field_cta_button_link
+    - field.field.block_content.hero_banner.field_event_info_detail_items
+    - field.field.block_content.hero_banner.field_image
+    - field.field.block_content.hero_banner.field_title
+  module:
+    - link
+id: block_content.hero_banner.default
+targetEntityType: block_content
+bundle: hero_banner
+mode: default
+content:
+  field_cta_button_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_event_info_detail_items:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true

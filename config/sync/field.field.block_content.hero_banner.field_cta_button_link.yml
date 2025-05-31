@@ -1,0 +1,23 @@
+uuid: 49fd4b4c-3f9f-4b44-a4cc-99bdea4b9afd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_cta_button_link
+  module:
+    - link
+id: block_content.hero_banner.field_cta_button_link
+field_name: field_cta_button_link
+entity_type: block_content
+bundle: hero_banner
+label: 'CTA button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

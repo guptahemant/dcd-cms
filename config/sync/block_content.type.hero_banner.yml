@@ -1,0 +1,8 @@
+uuid: 87fb68fd-b947-4f8e-bf2a-1f1f8e7308b0
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner
+label: 'Hero Banner'
+revision: false
+description: 'This is hero banner component.'

@@ -1,0 +1,25 @@
+uuid: 1ee66eea-27e7-4f06-baf4-d9ddbff22649
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:e0c2060d-b80b-450a-b37d-8e6d20870906'
+  module:
+    - block_content
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_herobannercomponent
+theme: drupal_cms_olivero
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:e0c2060d-b80b-450a-b37d-8e6d20870906'
+settings:
+  id: 'block_content:e0c2060d-b80b-450a-b37d-8e6d20870906'
+  label: 'Hero Banner Component'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
