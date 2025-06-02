@@ -1,0 +1,22 @@
+uuid: 56290fa9-6fd2-42f4-a6f8-dc0a74ed4890
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_code_conduct
+  module:
+    - user
+id: user.user.field_code_conduct
+field_name: field_code_conduct
+entity_type: user
+bundle: user
+label: 'Code of conduct'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 9d120723-3c43-491c-963c-99ab39b907c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_subscribe
+field_name: field_subscribe
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

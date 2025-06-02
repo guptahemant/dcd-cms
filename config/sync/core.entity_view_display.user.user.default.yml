@@ -1,4 +1,4 @@
-uuid: e4f84edd-3a05-4887-a712-859e5f53d151
+uuid: 9f7c5ca2-5966-414c-bb41-ab0ffd337023
 langcode: en
 status: true
 dependencies:
@@ -17,115 +17,110 @@ dependencies:
   module:
     - address
     - link
-    - media_library
-    - telephone
     - user
-_core:
-  default_config_hash: pojsLtV41YIYgWaeuqfl6yG8fsVXhC1iVB7XwKG0nMc
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
-  account:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 5
-    region: content
   field_code_conduct:
-    type: boolean_checkbox
-    weight: 13
-    region: content
+    type: boolean
+    label: above
     settings:
-      display_label: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
+    weight: 16
+    region: content
   field_country:
     type: address_country_default
-    weight: 6
-    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
-  field_drupalorg_username:
-    type: string_textfield
-    weight: 8
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_first_name:
-    type: string_textfield
-    weight: 3
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_last_name:
-    type: string_textfield
-    weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_linkedin_url:
-    type: link_default
     weight: 9
     region: content
+  field_drupalorg_username:
+    type: string
+    label: above
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      link_to_entity: false
     third_party_settings: {  }
-  field_organisation:
-    type: string_textfield
     weight: 11
     region: content
+  field_first_name:
+    type: string
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-  field_phone:
-    type: telephone_default
-    weight: 5
+    weight: 6
     region: content
+  field_last_name:
+    type: string
+    label: above
     settings:
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-  field_photo:
-    type: media_library_widget
-    weight: 14
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_slack_username:
-    type: string_textfield
     weight: 7
     region: content
+  field_linkedin_url:
+    type: link
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-  field_subscribe:
-    type: boolean_checkbox
     weight: 12
     region: content
+  field_organisation:
+    type: string
+    label: above
     settings:
-      display_label: true
+      link_to_entity: false
     third_party_settings: {  }
-  language:
-    weight: 1
+    weight: 14
     region: content
+  field_phone:
+    type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
-  timezone:
-    weight: 2
+    weight: 8
     region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_slack_username:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_subscribe:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  member_for:
     settings: {  }
     third_party_settings: {  }
-hidden:
-  path: true
+    weight: 5
+    region: content
+hidden: {  }

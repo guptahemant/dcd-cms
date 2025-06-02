@@ -1,0 +1,20 @@
+uuid: c06d6a8b-29ed-4da3-9704-db905811097b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_drupalorg_username
+  module:
+    - user
+id: user.user.field_drupalorg_username
+field_name: field_drupalorg_username
+entity_type: user
+bundle: user
+label: 'drupal.org username'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

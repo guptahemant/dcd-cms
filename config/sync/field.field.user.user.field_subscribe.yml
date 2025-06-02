@@ -1,0 +1,22 @@
+uuid: e46a5c32-1ee0-4901-8d68-5bf747960995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_subscribe
+  module:
+    - user
+id: user.user.field_subscribe
+field_name: field_subscribe
+entity_type: user
+bundle: user
+label: Subscribe
+description: 'Subscribed to our news and update on Mail'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

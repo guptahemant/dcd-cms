@@ -1,8 +1,9 @@
-uuid: e4f84edd-3a05-4887-a712-859e5f53d151
+uuid: 3dc236f3-f264-4530-a34c-bf1e062517c4
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_code_conduct
     - field.field.user.user.field_country
     - field.field.user.user.field_drupalorg_username
@@ -22,10 +23,10 @@ dependencies:
     - user
 _core:
   default_config_hash: pojsLtV41YIYgWaeuqfl6yG8fsVXhC1iVB7XwKG0nMc
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: 0
@@ -37,7 +38,7 @@ content:
     region: content
   field_code_conduct:
     type: boolean_checkbox
-    weight: 13
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -97,7 +98,7 @@ content:
     third_party_settings: {  }
   field_photo:
     type: media_library_widget
-    weight: 14
+    weight: 12
     region: content
     settings:
       media_types: {  }
@@ -112,7 +113,7 @@ content:
     third_party_settings: {  }
   field_subscribe:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
