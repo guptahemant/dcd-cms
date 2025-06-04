@@ -1,0 +1,147 @@
+uuid: 2fa595c0-1539-49cc-b937-dd8276140286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.papers.field_additional_info
+    - field.field.node.papers.field_audience_type
+    - field.field.node.papers.field_captivating_introduction
+    - field.field.node.papers.field_country
+    - field.field.node.papers.field_date
+    - field.field.node.papers.field_description
+    - field.field.node.papers.field_event
+    - field.field.node.papers.field_first_time_session
+    - field.field.node.papers.field_learning_objectives
+    - field.field.node.papers.field_outline
+    - field.field.node.papers.field_prerequisite
+    - field.field.node.papers.field_session_type
+    - field.field.node.papers.field_slot
+    - field.field.node.papers.field_track
+    - field.field.node.papers.field_track_category
+    - node.type.papers
+  module:
+    - address
+    - datetime
+    - text
+    - user
+id: node.papers.default
+targetEntityType: node
+bundle: papers
+mode: default
+content:
+  field_additional_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_audience_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_captivating_introduction:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_country:
+    type: address_country_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_first_time_session:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_learning_objectives:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_outline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_prerequisite:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_session_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_slot:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_track:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_track_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true

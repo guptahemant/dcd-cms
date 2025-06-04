@@ -1,0 +1,21 @@
+uuid: 7ada64fd-c39e-4bad-9e51-7209b8a4e7d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.papers
+  module:
+    - datetime
+id: node.papers.field_date
+field_name: field_date
+entity_type: node
+bundle: papers
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

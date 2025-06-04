@@ -1,8 +1,8 @@
-uuid: bb703723-49a7-4cdc-8038-dd1adb7ae6df
+uuid: fd99d532-59b7-469c-94a8-2dd835bdb6f7
 langcode: en
 status: true
 dependencies: {  }
 id: text_block
 label: 'Text Block'
 revision: false
-description: 'This is text block component with Title and block fields.'
+description: 'This is text block component with Title and body fields.'

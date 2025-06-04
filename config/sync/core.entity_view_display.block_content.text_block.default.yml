@@ -1,11 +1,11 @@
-uuid: 4f733a43-e8c3-4f30-bc7e-3c39626e2467
+uuid: 874090d3-40fe-484d-a578-6e6b8835b2c3
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.text_block
     - field.field.block_content.text_block.body
-    - field.field.block_content.text_block.field_title
+    - field.field.block_content.text_block.field_text_title
   module:
     - text
 id: block_content.text_block.default
@@ -20,7 +20,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_title:
+  field_text_title:
     type: string
     label: hidden
     settings:

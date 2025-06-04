@@ -1,0 +1,29 @@
+uuid: 0553058f-b3c4-4342-9932-f2f8ffb532c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slot
+    - node.type.papers
+    - taxonomy.vocabulary.slot
+id: node.papers.field_slot
+field_name: field_slot
+entity_type: node
+bundle: papers
+label: Slot
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      slot: slot
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: tags
+field_type: entity_reference

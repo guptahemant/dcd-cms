@@ -1,0 +1,29 @@
+uuid: ac0458a3-f269-4596-9859-aee33d97bfe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event
+    - node.type.event
+    - node.type.papers
+id: node.papers.field_event
+field_name: field_event
+entity_type: node
+bundle: papers
+label: Event
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

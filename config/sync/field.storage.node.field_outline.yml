@@ -1,0 +1,19 @@
+uuid: 7af59156-ebd6-467a-8826-49bd376f6bf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_outline
+field_name: field_outline
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

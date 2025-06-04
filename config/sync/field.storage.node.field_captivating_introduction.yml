@@ -1,0 +1,19 @@
+uuid: e9b662bb-9f3e-4295-a6ed-8bcc52d0b765
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_captivating_introduction
+field_name: field_captivating_introduction
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

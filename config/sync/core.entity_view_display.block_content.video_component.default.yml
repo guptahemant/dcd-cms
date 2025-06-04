@@ -1,0 +1,45 @@
+uuid: f3ffb2da-1646-4e53-a9f2-c35411e04a86
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_component
+    - field.field.block_content.video_component.body
+    - field.field.block_content.video_component.field_title
+    - field.field.block_content.video_component.field_video_url
+  module:
+    - link
+    - text
+id: block_content.video_component.default
+targetEntityType: block_content
+bundle: video_component
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_video_url:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

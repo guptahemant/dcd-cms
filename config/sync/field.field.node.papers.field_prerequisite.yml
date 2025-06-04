@@ -1,0 +1,22 @@
+uuid: 049ace72-4d9c-4061-99c3-80fdf9df936f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prerequisite
+    - node.type.papers
+  module:
+    - text
+id: node.papers.field_prerequisite
+field_name: field_prerequisite
+entity_type: node
+bundle: papers
+label: Prerequisite
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

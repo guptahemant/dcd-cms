@@ -1,0 +1,21 @@
+uuid: 2e970117-29ca-494f-8217-edfc1301974d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_time_session
+    - node.type.papers
+id: node.papers.field_first_time_session
+field_name: field_first_time_session
+entity_type: node
+bundle: papers
+label: 'First time this session is presented'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 9133440e-6d36-4b3d-bc5a-cba164d3cc75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.papers
+  module:
+    - address
+id: node.papers.field_country
+field_name: field_country
+entity_type: node
+bundle: papers
+label: Country
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

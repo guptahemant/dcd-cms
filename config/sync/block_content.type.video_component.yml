@@ -1,0 +1,8 @@
+uuid: e590c1e8-cf66-4280-bbab-ee48077b079b
+langcode: en
+status: true
+dependencies: {  }
+id: video_component
+label: 'Video Component'
+revision: false
+description: 'This a video component with video link field.'

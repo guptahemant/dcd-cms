@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - dashboard.dashboard.welcome
+    - node.type.papers
   module:
     - captcha
     - coffee
@@ -24,7 +25,9 @@ permissions:
   - 'access coffee'
   - 'access content'
   - 'bypass honeypot protection'
+  - 'create papers content'
   - 'delete own files'
+  - 'edit own papers content'
   - 'skip CAPTCHA'
   - 'use klaro'
   - 'view media'

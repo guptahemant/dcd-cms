@@ -1,0 +1,22 @@
+uuid: 67f4999c-3320-4129-8946-899215d17755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_captivating_introduction
+    - node.type.papers
+  module:
+    - text
+id: node.papers.field_captivating_introduction
+field_name: field_captivating_introduction
+entity_type: node
+bundle: papers
+label: 'Captivating Introduction'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

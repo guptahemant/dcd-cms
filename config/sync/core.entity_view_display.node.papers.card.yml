@@ -1,0 +1,56 @@
+uuid: 8ddb1da6-13e9-48b4-9ba9-4b71bb96e081
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.papers.field_additional_info
+    - field.field.node.papers.field_audience_type
+    - field.field.node.papers.field_captivating_introduction
+    - field.field.node.papers.field_country
+    - field.field.node.papers.field_date
+    - field.field.node.papers.field_description
+    - field.field.node.papers.field_event
+    - field.field.node.papers.field_first_time_session
+    - field.field.node.papers.field_learning_objectives
+    - field.field.node.papers.field_outline
+    - field.field.node.papers.field_prerequisite
+    - field.field.node.papers.field_session_type
+    - field.field.node.papers.field_slot
+    - field.field.node.papers.field_track
+    - field.field.node.papers.field_track_category
+    - node.type.papers
+  module:
+    - user
+id: node.papers.card
+targetEntityType: node
+bundle: papers
+mode: card
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_additional_info: true
+  field_audience_type: true
+  field_captivating_introduction: true
+  field_country: true
+  field_date: true
+  field_event: true
+  field_first_time_session: true
+  field_learning_objectives: true
+  field_outline: true
+  field_prerequisite: true
+  field_session_type: true
+  field_slot: true
+  field_track: true
+  field_track_category: true

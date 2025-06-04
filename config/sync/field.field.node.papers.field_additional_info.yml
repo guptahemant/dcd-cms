@@ -1,0 +1,22 @@
+uuid: 9c01b354-bba9-4b1c-aa0e-56f09866700d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_info
+    - node.type.papers
+  module:
+    - text
+id: node.papers.field_additional_info
+field_name: field_additional_info
+entity_type: node
+bundle: papers
+label: 'Additional Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

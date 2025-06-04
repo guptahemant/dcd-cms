@@ -100,3 +100,10 @@ Active development branch is `develop`
 
 ## Troubleshooting
 - Use github issues to report any issues you encounter.
+
+## How to pickup issues
+- Go to https://github.com/users/guptahemant/projects/3
+- Pickup issues from ready / backlog queue
+- Add a comment on an issue, if you are workin upon it.
+- Once work is completed, Create the PR and make sure to mention the issue id in PR.
+- Post the PR link in slack channel for review.

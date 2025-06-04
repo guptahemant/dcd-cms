@@ -1,4 +1,4 @@
-https://team-1611771845111.atlassian.net/browse/MRDP-<NUMBER>
+https://github.com/guptahemant/dcd-cms/issues/<NUMBER>
 
 ## Checklist before requesting a review
 
