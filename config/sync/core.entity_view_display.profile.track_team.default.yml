@@ -1,0 +1,30 @@
+uuid: 7a490f62-f5c6-47b9-b9e8-01eb39f37453
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.track_team.field_focus_areas
+    - field.field.profile.track_team.field_track_team
+    - profile.type.track_team
+id: profile.track_team.default
+targetEntityType: profile
+bundle: track_team
+mode: default
+content:
+  field_focus_areas:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_track_team:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

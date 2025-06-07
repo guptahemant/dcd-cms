@@ -1,0 +1,43 @@
+uuid: 0cf85f51-cebb-49e8-8c71-be404cd00960
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.track_team.field_focus_areas
+    - field.field.profile.track_team.field_track_team
+    - profile.type.track_team
+  module:
+    - tagify
+id: profile.track_team.default
+targetEntityType: profile
+bundle: track_team
+mode: default
+content:
+  field_focus_areas:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+    third_party_settings: {  }
+  field_track_team:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+    third_party_settings: {  }
+hidden:
+  is_default: true

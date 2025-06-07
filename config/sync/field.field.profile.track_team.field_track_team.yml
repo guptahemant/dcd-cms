@@ -1,0 +1,29 @@
+uuid: e92cded2-41e1-40bd-8ef8-367dd2fe5d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_track_team
+    - profile.type.track_team
+    - taxonomy.vocabulary.track_team
+id: profile.track_team.field_track_team
+field_name: field_track_team
+entity_type: profile
+bundle: track_team
+label: 'Track team'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      track_team: track_team
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
