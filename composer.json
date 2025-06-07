@@ -36,6 +36,7 @@
         "drupal/drupal_cms_project": "~1.1.0",
         "drupal/drupal_cms_seo_tools": "~1.1.0",
         "drupal/drupal_cms_starter": "~1.1.0",
+        "drupal/profile": "^1.12",
         "drupal/project_browser": "@beta",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/views_bulk_operations": "^4.3",
