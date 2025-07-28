@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: 0E8z47ONguVcapiw1PGWDRs6g0NRDCzrym4mP_jcELU
+auth: {  }
+post_login: /user
+user_allowed: register
+redirect_user_form: true
+disable_admin_login: true
+disabled_roles:
+  content_editor: '0'
+  administrator: '0'
+  site_admins: '0'
+  volunteers: '0'
+  track_team_lead: '0'
+  track_team_member: '0'
+  speakers: '0'

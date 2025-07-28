@@ -1,0 +1,8 @@
+name: Google Profile Handler
+type: module
+description: 'Saves Google user profile data to Drupal user profiles'
+package: Authentication
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - social_auth_google:social_auth_google
+  - social_auth:social_auth

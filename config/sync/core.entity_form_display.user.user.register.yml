@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_do_username
   module:
     - profile
     - user
@@ -29,13 +30,13 @@ content:
     third_party_settings: {  }
   profile_profiles:
     type: profile_form
-    weight: 90
+    weight: 3
     region: content
     settings:
       form_mode: default
     third_party_settings: {  }
   timezone:
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,5 +48,7 @@ content:
       form_mode: default
     third_party_settings: {  }
 hidden:
+  field_do_username: true
   path: true
+  social_auth: true
   track_team_profiles: true

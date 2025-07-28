@@ -1,13 +1,15 @@
-uuid: 84b33b2b-c0c1-4f98-a331-1b83029b5374
+uuid: bdfa106a-f5f1-440b-9b35-2c059a8c8331
 langcode: en
 status: true
 dependencies:
   module:
     - do_username
-    - profile
-id: profile.field_drupal_org_username
-field_name: field_drupal_org_username
-entity_type: profile
+    - user
+_core:
+  default_config_hash: v_X0squsB7GP1G0bc2tL01HzskqkQhvTjEcBkc95f6k
+id: user.field_do_username
+field_name: field_do_username
+entity_type: user
 type: do_username
 settings:
   max_length: 60

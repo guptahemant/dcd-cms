@@ -2,6 +2,8 @@ uuid: e4f84edd-3a05-4887-a712-859e5f53d151
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_do_username
   module:
     - user
 _core:
@@ -25,12 +27,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_do_username: true
   path: true
   profile_profiles: true
+  social_auth: true
   track_team_profiles: true
   user_profiles: true
