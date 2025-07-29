@@ -12,12 +12,14 @@ dependencies:
     - field.field.profile.profile.field_linkedin_url
     - field.field.profile.profile.field_organisation
     - field.field.profile.profile.field_phone
-    - field.field.profile.profile.field_photo
+    - field.field.profile.profile.field_profile_photo
     - field.field.profile.profile.field_slack_username
     - field.field.profile.profile.field_subscribe
     - profile.type.profile
   module:
     - address
+    - do_username
+    - file
     - link
     - text
 id: profile.profile.default
@@ -50,12 +52,13 @@ content:
     weight: 3
     region: content
   field_drupal_org_username:
-    type: string
+    type: do_username_default
     label: above
     settings:
-      link_to_entity: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 12
     region: content
   field_first_name:
     type: string
@@ -100,14 +103,13 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_photo:
-    type: entity_reference_entity_view
+  field_profile_photo:
+    type: file_default
     label: above
     settings:
-      view_mode: default
-      link: false
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 9
+    weight: 13
     region: content
   field_slack_username:
     type: string

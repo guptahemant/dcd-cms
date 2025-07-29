@@ -1,0 +1,23 @@
+uuid: d08e35e2-489c-4a2c-9a4a-9fa18a1c9c78
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - profile
+id: profile.field_profile_photo
+field_name: field_profile_photo
+entity_type: profile
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

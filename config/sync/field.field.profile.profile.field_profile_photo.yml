@@ -1,0 +1,27 @@
+uuid: 536ded28-bae3-436f-a3eb-34d8d2be508a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_photo
+    - profile.type.profile
+  module:
+    - file
+id: profile.profile.field_profile_photo
+field_name: field_profile_photo
+entity_type: profile
+bundle: profile
+label: 'Profile Photo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'user_pictures/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: 10MB
+  description_field: false
+field_type: file

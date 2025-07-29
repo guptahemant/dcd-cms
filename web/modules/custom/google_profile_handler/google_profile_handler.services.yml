@@ -1,0 +1,6 @@
+services:
+  google_profile_handler.event_subscriber:
+    class: Drupal\google_profile_handler\EventSubscriber\GoogleProfileSubscriber
+    arguments: ['@logger.factory', '@entity_type.manager', '@http_client', '@file_system', '@file.repository']
+    tags:
+      - { name: event_subscriber }
