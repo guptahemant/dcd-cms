@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
-    - field.field.user.user.field_do_username
   module:
     - profile
     - user
@@ -48,7 +47,6 @@ content:
       form_mode: default
     third_party_settings: {  }
 hidden:
-  field_do_username: true
   path: true
   social_auth: true
   track_team_profiles: true

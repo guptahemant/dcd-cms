@@ -2,8 +2,6 @@ uuid: 9f7c5ca2-5966-414c-bb41-ab0ffd337023
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.user.user.field_do_username
   module:
     - user
 id: user.user.default
@@ -17,7 +15,6 @@ content:
     weight: 5
     region: content
 hidden:
-  field_do_username: true
   profile_profiles: true
   track_team_profiles: true
   user_profiles: true
