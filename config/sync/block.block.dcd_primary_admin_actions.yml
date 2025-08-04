@@ -1,0 +1,20 @@
+uuid: 6088ebbe-b091-44c5-856c-5b6ad75a6d96
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dcd
+_core:
+  default_config_hash: bXIY_bcTLD1-0gwNQhWPHANNy6hQa_RxJgvHxKhNS2E
+id: dcd_primary_admin_actions
+theme: dcd
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -44,13 +44,10 @@
  */
 #}
 <div class="layout-container">
-
+  {{ page.top_header }}
   <header role="banner">
     {{ page.header }}
   </header>
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -59,18 +56,11 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
   </main>
 
-  {% if page.footer %}
     <footer role="contentinfo">
-      {{ page.footer }}
+      {{ page.top_footer }}
+      {{ page.bottom_footer }}
     </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}

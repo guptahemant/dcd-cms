@@ -5,10 +5,10 @@ core_version_requirement: ^10 || ^11
 base theme: stable9
 libraries:
   - dcd/global-styling
+
 regions:
+  top_header: Top Header
   header: Header
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
   content: Content
-  sidebar: Sidebar
-  footer: Footer
+  top_footer: Top Footer
+  bottom_footer: Bottom Footer
