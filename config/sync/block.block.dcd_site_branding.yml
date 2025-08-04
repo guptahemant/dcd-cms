@@ -1,0 +1,25 @@
+uuid: 80fd24b7-7a80-4e28-85da-210a28a97db6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dcd
+_core:
+  default_config_hash: MX2iS2rMC2lQ-sUFnOKksJ01S2lh0j5-80hKkdDmHkI
+id: dcd_site_branding
+theme: dcd
+region: header
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

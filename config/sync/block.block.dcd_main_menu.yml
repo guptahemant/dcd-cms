@@ -1,0 +1,27 @@
+uuid: 68f49d16-8e5f-4a4f-9534-0509f5097fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - dcd
+_core:
+  default_config_hash: IYx37JlV-JCEqldSOUCsYu6gh4RpwuLDPpoeQcEF7mk
+id: dcd_main_menu
+theme: dcd
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
