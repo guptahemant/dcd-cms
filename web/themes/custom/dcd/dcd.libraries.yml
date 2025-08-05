@@ -3,3 +3,5 @@ global-styling:
   css:
     theme:
       assets/css/style.css: {}
+
+      

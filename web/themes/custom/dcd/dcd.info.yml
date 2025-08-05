@@ -3,11 +3,12 @@ type: theme
 description: 'Drupal camp delhi site built on top of drupal cms'
 core_version_requirement: ^10 || ^11
 base theme: stable9
+# dcd.info.yml
 libraries:
   - dcd/global-styling
 
+
 regions:
-  top_header: Top Header
   header: Header
   content: Content
   top_footer: Top Footer
