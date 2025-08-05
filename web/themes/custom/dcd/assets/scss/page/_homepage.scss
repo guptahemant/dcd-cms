@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as *;
+
+.top-banner {
+  background: $bg-yellow;
+  padding: 8px 0;
+  color: $text-brown;
+  text-align: center;
+}

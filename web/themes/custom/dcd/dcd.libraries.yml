@@ -3,3 +3,8 @@ global-styling:
   css:
     theme:
       assets/css/style.css: {}
+  js:
+    assets/js/script.js: {}
+  dependencies:
+    - core/jquery
+    

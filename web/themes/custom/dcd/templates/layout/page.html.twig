@@ -44,23 +44,32 @@
  */
 #}
 <div class="layout-container">
-  {{ page.top_header }}
+{% if top_banner_text %}
+  <div class="top-banner">
+    {{ top_banner_text }}
+  </div>
+{% endif %}
+
+
   <header role="banner">
     {{ page.header }}
   </header>
 
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>
+    {# link is in html.html.twig #}
 
     <div class="layout-content">
       {{ page.content }}
-    </div>{# /.layout-content #}
+    </div>
+    {# /.layout-content #}
 
   </main>
 
-    <footer role="contentinfo">
-      {{ page.top_footer }}
-      {{ page.bottom_footer }}
-    </footer>
+  <footer role="contentinfo">
+    {{ page.top_footer }}
+    {{ page.bottom_footer }}
+  </footer>
 
-</div>{# /.layout-container #}
+</div>
+{# /.layout-container #}

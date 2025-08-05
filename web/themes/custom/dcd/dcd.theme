@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * @file
  * Theme hooks and preprocess functions for the DCD theme.
@@ -9,8 +11,29 @@
  * Implements hook_preprocess_HOOK() for page templates.
  */
 function dcd_preprocess_page(array &$variables) {
-  // Example: Add a body class based on route.
+  // Existing class logic if any.
   if (\Drupal::routeMatch()->getRouteName() === 'user.login') {
     $variables['attributes']['class'][] = 'user-login-page';
   }
+
+  // Pass the theme setting to the Twig template.
+  $variables['top_banner_text'] = theme_get_setting('top_banner_text');
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function dcd_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['dcd_top_banner'] = [
+    '#type' => 'details',
+    '#title' => t('Top Banner Settings'),
+    '#open' => TRUE,
+  ];
+
+  $form['dcd_top_banner']['top_banner_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Top Banner Text'),
+    '#default_value' => theme_get_setting('top_banner_text'),
+    '#description' => t('Enter the text to be shown in the top banner.'),
+  ];
 }
