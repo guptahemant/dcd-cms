@@ -26,13 +26,13 @@ h4 {
   line-height: 120%;
 }
 
-h5{
+h5 {
   font-size: 28px;
   font-weight: 400;
   line-height: 120%;
 }
 
-h6{
+h6 {
   font-size: 24px;
   font-weight: 400;
   line-height: 120%;
@@ -43,16 +43,24 @@ p {
   line-height: 120%;
 }
 
-p.small{
+p.small {
   font-size: 14px;
   line-height: 120%;
 }
 
-p.vsmall{
+p.vsmall {
   font-size: 12px;
   line-height: 120%;
 }
 
 body {
   font-family: $font-primary;
+}
+
+a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: #FF2370;
 }
