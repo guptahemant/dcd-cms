@@ -179,10 +179,11 @@ footer[role=contentinfo] {
   text-align: center;
 }
 footer[role=contentinfo] .footer-text {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   color: #ffffff;
+  font-family: "Brightwall", serif;
 }
 footer[role=contentinfo] .region--top-footer {
   margin-bottom: 2rem;

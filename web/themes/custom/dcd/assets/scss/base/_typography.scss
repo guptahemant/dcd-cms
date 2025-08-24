@@ -1,6 +1,4 @@
-// Heading styles from Figma scale
-$font-primary: 'Geist', sans-serif;
-$font-secondary: 'Brightwall', serif;
+@use '../abstracts/variables' as *;
 
 h1 {
   font-size: 70px;
