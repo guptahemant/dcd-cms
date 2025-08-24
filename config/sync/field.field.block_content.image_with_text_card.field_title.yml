@@ -1,0 +1,19 @@
+uuid: 9f514556-f60f-4b99-8752-7ea0904c9b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text_card
+    - field.storage.block_content.field_title
+id: block_content.image_with_text_card.field_title
+field_name: field_title
+entity_type: block_content
+bundle: image_with_text_card
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

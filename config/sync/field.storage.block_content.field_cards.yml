@@ -1,0 +1,19 @@
+uuid: 8caf1802-671d-4e19-b5cc-7a33632230fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_cards
+field_name: field_cards
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

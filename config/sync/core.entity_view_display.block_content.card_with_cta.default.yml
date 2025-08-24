@@ -1,0 +1,32 @@
+uuid: dab0c186-aa86-445f-8962-75c2162e5c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_with_cta
+    - field.field.block_content.card_with_cta.body
+    - field.field.block_content.card_with_cta.field_cards
+    - field.field.block_content.card_with_cta.field_title
+id: block_content.card_with_cta.default
+targetEntityType: block_content
+bundle: card_with_cta
+mode: default
+content:
+  field_cards:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
