@@ -83,7 +83,7 @@ Manually pull and import the DB
 - To login use `ddev drush @alias uli`
 
 #### 2.4] Frontend setup.
-- To be added
+- Refer the steps inside DCD theme folder.
 
 ## Development workflow before starting work on any new task.
 Active development branch is `develop`
