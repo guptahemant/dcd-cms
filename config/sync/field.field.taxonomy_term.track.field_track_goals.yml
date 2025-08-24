@@ -1,0 +1,22 @@
+uuid: 3939353d-55be-4704-a98c-16d5cec08131
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_track_goals
+    - taxonomy.vocabulary.track
+  module:
+    - text
+id: taxonomy_term.track.field_track_goals
+field_name: field_track_goals
+entity_type: taxonomy_term
+bundle: track
+label: "Track Goals\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

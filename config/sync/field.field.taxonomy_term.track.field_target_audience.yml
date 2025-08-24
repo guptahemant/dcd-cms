@@ -1,0 +1,22 @@
+uuid: d3f3e844-b496-408b-9102-b6ab2beb287f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target_audience
+    - taxonomy.vocabulary.track
+  module:
+    - text
+id: taxonomy_term.track.field_target_audience
+field_name: field_target_audience
+entity_type: taxonomy_term
+bundle: track
+label: 'Target Audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
