@@ -1,0 +1,8 @@
+uuid: 5bff3490-935e-4f83-9c1d-249b4871278f
+langcode: en
+status: true
+dependencies: {  }
+id: card_with_cta
+label: 'Card with CTA'
+revision: false
+description: null
