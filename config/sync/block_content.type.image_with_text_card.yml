@@ -1,0 +1,8 @@
+uuid: 4ade9fa0-0297-4c0f-bdad-14b78dd5077b
+langcode: en
+status: true
+dependencies: {  }
+id: image_with_text_card
+label: 'Image with text card'
+revision: false
+description: null

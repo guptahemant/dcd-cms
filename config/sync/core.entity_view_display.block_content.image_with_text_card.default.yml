@@ -1,0 +1,64 @@
+uuid: 5d6e03e1-e43e-4499-b7ba-0eb79e4563fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text_card
+    - field.field.block_content.image_with_text_card.body
+    - field.field.block_content.image_with_text_card.field_cta_button_link
+    - field.field.block_content.image_with_text_card.field_cta_button_text
+    - field.field.block_content.image_with_text_card.field_image
+    - field.field.block_content.image_with_text_card.field_title
+  module:
+    - link
+    - text
+id: block_content.image_with_text_card.default
+targetEntityType: block_content
+bundle: image_with_text_card
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_button_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 5dff0304-3fd7-4271-ba9a-91aaefcd482c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text_card
+    - field.storage.block_content.field_cta_button_text
+id: block_content.image_with_text_card.field_cta_button_text
+field_name: field_cta_button_text
+entity_type: block_content
+bundle: image_with_text_card
+label: 'CTA button Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
