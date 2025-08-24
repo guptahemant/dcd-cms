@@ -9,13 +9,13 @@ dependencies:
 id: dcd_socialmedialinks
 theme: dcd
 region: header
-weight: -1
+weight: -2
 provider: null
 plugin: social_media_links_block
 settings:
   id: social_media_links_block
   label: 'Social Media Links'
-  label_display: visible
+  label_display: '0'
   provider: social_media_links
   platforms:
     rss:
