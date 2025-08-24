@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.hero_banner
     - field.field.block_content.hero_banner.body
     - field.field.block_content.hero_banner.field_cta_button_link
-    - field.field.block_content.hero_banner.field_event_info_detail_items
     - field.field.block_content.hero_banner.field_image
   module:
     - link
@@ -26,13 +25,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_event_info_detail_items:
-    type: basic_string
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_image:
     type: entity_reference_entity_view
