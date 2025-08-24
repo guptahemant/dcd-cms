@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.hero_banner.field_cta_button_link
     - field.field.block_content.hero_banner.field_event_info_detail_items
     - field.field.block_content.hero_banner.field_image
-    - field.field.block_content.hero_banner.field_title
   module:
     - link
 id: block_content.hero_banner.default
@@ -43,14 +42,6 @@ content:
       link: false
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_title:
-    type: string
-    label: visually_hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden:
   body: true
