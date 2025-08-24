@@ -114,6 +114,11 @@ header[role=banner] {
   color: #007bff;
 }
 
+/* Center logo */
+.block-system-branding-block {
+  background: none;
+}
+
 /* Social icons on right */
 #block-dcd-socialmedialinks ul {
   gap: 15px;

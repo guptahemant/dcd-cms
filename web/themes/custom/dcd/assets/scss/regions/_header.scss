@@ -33,9 +33,24 @@ header[role="banner"] {
   color: #007bff;
 }
 
+/* Center logo */
+.block-system-branding-block {
+  background: none;
+}
+// #block-dcd-site-branding {
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   top: 5px;
+// }
+
+// #block-dcd-site-branding .site-branding__logo img {
+//   height: 80px;
+//   width: auto;
+// }
+
 /* Social icons on right */
 #block-dcd-socialmedialinks ul {
-  // display: flex;
   gap: 15px;
   margin: 0;
   padding: 0;
