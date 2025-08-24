@@ -1,0 +1,46 @@
+uuid: 7c506ba1-d83c-49f6-83a3-512499017e8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.track.field_target_audience
+    - field.field.taxonomy_term.track.field_track_goals
+    - field.field.taxonomy_term.track.field_track_keyword
+    - taxonomy.vocabulary.track
+  module:
+    - text
+id: taxonomy_term.track.default
+targetEntityType: taxonomy_term
+bundle: track
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_target_audience:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_track_goals:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_track_keyword:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

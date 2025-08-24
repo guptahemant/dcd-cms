@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.track.field_target_audience
+    - field.field.taxonomy_term.track.field_track_goals
+    - field.field.taxonomy_term.track.field_track_keyword
     - taxonomy.vocabulary.track
   module:
     - path
+    - tagify
     - text
 id: taxonomy_term.track.default
 targetEntityType: taxonomy_term
@@ -13,16 +17,45 @@ bundle: track
 mode: default
 content:
   description:
-    type: text_textfield
-    weight: 0
+    type: text_textarea
+    weight: 1
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_target_audience:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_track_goals:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_track_keyword:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -30,13 +63,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 6
     region: content
     settings:
       display_label: true

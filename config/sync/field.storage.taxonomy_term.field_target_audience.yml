@@ -1,0 +1,19 @@
+uuid: a41d4214-60bd-49e0-860a-469a4f929a51
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_target_audience
+field_name: field_target_audience
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

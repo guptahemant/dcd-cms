@@ -1,0 +1,29 @@
+uuid: b9237866-eccb-44f6-bcbf-cfac485c1d6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_track_keyword
+    - taxonomy.vocabulary.track
+    - taxonomy.vocabulary.track_category
+id: taxonomy_term.track.field_track_keyword
+field_name: field_track_keyword
+entity_type: taxonomy_term
+bundle: track
+label: 'Track Keyword'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      track_category: track_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
