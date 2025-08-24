@@ -1,0 +1,21 @@
+uuid: 9bcc2dc6-5052-4bb8-9ce8-f356f042a1e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text
+    - field.storage.block_content.field_enable_cloud_bg_image
+id: block_content.image_with_text.field_enable_cloud_bg_image
+field_name: field_enable_cloud_bg_image
+entity_type: block_content
+bundle: image_with_text
+label: 'Enable cloud background image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
