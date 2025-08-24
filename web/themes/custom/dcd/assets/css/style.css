@@ -77,6 +77,10 @@ a {
   padding-right: 16px;
 }
 
+body {
+  background: #ffffff;
+}
+
 .top-banner {
   background: #F7EEE5;
   padding: 8px 0;
