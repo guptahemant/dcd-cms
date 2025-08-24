@@ -1,0 +1,19 @@
+uuid: fa132ee0-6568-4f7b-bfae-d5f9e4da017d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_with_cta
+    - field.storage.block_content.field_title
+id: block_content.card_with_cta.field_title
+field_name: field_title
+entity_type: block_content
+bundle: card_with_cta
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
