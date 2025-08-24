@@ -2,8 +2,8 @@ name: DCD
 type: theme
 description: 'Drupal camp delhi site built on top of drupal cms'
 core_version_requirement: ^10 || ^11
-base theme: stable9
-# dcd.info.yml
+# base theme: stable9
+base theme: drupal_cms_olivero
 libraries:
   - dcd/global-styling
 
