@@ -155,7 +155,7 @@ settings:
       description: ''
       weight: '23'
     linkedin:
-      value: ''
+      value: company/drupal-association-delhi/
       description: ''
       weight: '24'
     yandex_zen:
