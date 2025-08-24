@@ -1,21 +1,18 @@
 @use '../abstracts/variables' as *;
 
-footer[role="contentinfo"] {
-  background: #1a237e;
-  color: #fff;
-  padding: 3rem 1rem;
+footer {
+  background: $cyan-500;
+  color: $text-light;
+  padding: 3rem 1rem 1rem 1rem;
   text-align: center;
 
   .footer-text {
     font-size: 2.5rem;
-    font-weight: 700;
     margin-bottom: 2.5rem;
-    color: #ffffff;
     font-family: $font-secondary;
   }
 
   .region--top-footer {
-    margin-bottom: 2rem;
 
     .block-menu {
       ul.menu {
@@ -31,13 +28,7 @@ footer[role="contentinfo"] {
 
           a {
             text-decoration: none;
-            color: #ccc;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-
-            &:hover {
-              color: #ffffff;
-            }
+            color: inherit;
           }
         }
       }
@@ -45,28 +36,24 @@ footer[role="contentinfo"] {
   }
 
   .region--bottom-footer {
+    border-top: 1px solid;
+    padding: 1rem 0 0 0;
     .block-social-media-links {
-      margin-top: 2rem;
 
       h2.block__title {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: #ffffff;
+        color: inherit;
       }
 
       ul.platforms {
         display: flex;
         justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
         gap: 1.2rem;
 
         li {
           a {
-            color: #fff;
+            color: inherit;
           }
         }
       }

@@ -159,36 +159,36 @@ header[role=banner] {
 
 /* Register button style */
 #block-dcd-account-menu .menu__item .menu__link {
-  background: #1a237e;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 99px;
+  background-color: #293A80;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+#block-dcd-account-menu .menu__item .menu__link:hover, #block-dcd-account-menu .menu__item .menu__link:focus {
+  background-color: #A4D7EF;
 }
 
-#block-dcd-account-menu .menu__item .menu__link:hover {
-  background: #0d153a;
-}
-
-footer[role=contentinfo] {
-  background: #1a237e;
-  color: #fff;
-  padding: 3rem 1rem;
+footer {
+  background: #212E66;
+  color: #ffffff;
+  padding: 3rem 1rem 1rem 1rem;
   text-align: center;
 }
-footer[role=contentinfo] .footer-text {
+footer .footer-text {
   font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 2.5rem;
-  color: #ffffff;
   font-family: "Brightwall", serif;
 }
-footer[role=contentinfo] .region--top-footer {
-  margin-bottom: 2rem;
-}
-footer[role=contentinfo] .region--top-footer .block-menu ul.menu {
+footer .region--top-footer .block-menu ul.menu {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -196,38 +196,29 @@ footer[role=contentinfo] .region--top-footer .block-menu ul.menu {
   justify-content: center;
   gap: 2rem;
 }
-footer[role=contentinfo] .region--top-footer .block-menu ul.menu li {
+footer .region--top-footer .block-menu ul.menu li {
   display: inline-block;
 }
-footer[role=contentinfo] .region--top-footer .block-menu ul.menu li a {
+footer .region--top-footer .block-menu ul.menu li a {
   text-decoration: none;
-  color: #ccc;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  color: inherit;
 }
-footer[role=contentinfo] .region--top-footer .block-menu ul.menu li a:hover {
-  color: #ffffff;
+footer .region--bottom-footer {
+  border-top: 1px solid;
+  padding: 1rem 0 0 0;
 }
-footer[role=contentinfo] .region--bottom-footer .block-social-media-links {
-  margin-top: 2rem;
-}
-footer[role=contentinfo] .region--bottom-footer .block-social-media-links h2.block__title {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+footer .region--bottom-footer .block-social-media-links h2.block__title {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: inherit;
 }
-footer[role=contentinfo] .region--bottom-footer .block-social-media-links ul.platforms {
+footer .region--bottom-footer .block-social-media-links ul.platforms {
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
   gap: 1.2rem;
 }
-footer[role=contentinfo] .region--bottom-footer .block-social-media-links ul.platforms li a {
-  color: #fff;
+footer .region--bottom-footer .block-social-media-links ul.platforms li a {
+  color: inherit;
 }
 
 .top-banner {
