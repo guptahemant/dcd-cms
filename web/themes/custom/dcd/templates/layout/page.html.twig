@@ -67,6 +67,11 @@
   </main>
 
   <footer role="contentinfo">
+    {% if top_banner_text %}
+    <div class="footer-text">
+      {{ footer_text }}
+    </div>
+  {% endif %}
     {{ page.top_footer }}
     {{ page.bottom_footer }}
   </footer>

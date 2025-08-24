@@ -1,0 +1,177 @@
+uuid: 6f3e539a-3790-453d-a11a-294ea067cad1
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - dcd
+id: dcd_socialmedialinks_2
+theme: dcd
+region: bottom_footer
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Follow us'
+  label_display: visible
+  provider: social_media_links
+  platforms:
+    mastodon:
+      value: ''
+      description: ''
+      weight: '-10'
+    twitter:
+      value: ''
+      description: ''
+      weight: '-9'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-8'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '-7'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '-6'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-5'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '-4'
+    rss:
+      value: ''
+      description: ''
+      weight: '-3'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-2'
+    email:
+      value: ''
+      description: ''
+      weight: '-1'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '0'
+    telegram:
+      value: ''
+      description: ''
+      weight: '1'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '2'
+    youtube:
+      value: ''
+      description: ''
+      weight: '3'
+    contact:
+      value: ''
+      description: ''
+      weight: '4'
+    instagram:
+      value: ''
+      description: ''
+      weight: '5'
+    linkedin:
+      value: company/drupal-association-delhi/
+      description: ''
+      weight: '6'
+    github:
+      value: ''
+      description: ''
+      weight: '7'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '8'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '9'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '10'
+    amazon:
+      value: ''
+      description: ''
+      weight: '11'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '12'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '13'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '14'
+    meetup:
+      value: ''
+      description: ''
+      weight: '15'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '16'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '17'
+    facebook:
+      value: ''
+      description: ''
+      weight: '18'
+    patreon:
+      value: ''
+      description: ''
+      weight: '19'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '20'
+    website:
+      value: ''
+      description: ''
+      weight: '21'
+    behance:
+      value: ''
+      description: ''
+      weight: '22'
+    xing:
+      value: ''
+      description: ''
+      weight: '23'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '24'
+    flickr:
+      value: ''
+      description: ''
+      weight: '25'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }
