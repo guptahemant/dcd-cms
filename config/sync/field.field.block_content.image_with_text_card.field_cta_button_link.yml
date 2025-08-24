@@ -1,0 +1,23 @@
+uuid: 65ed6ec3-2dec-4e79-818f-2ea39cca8666
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text_card
+    - field.storage.block_content.field_cta_button_link
+  module:
+    - link
+id: block_content.image_with_text_card.field_cta_button_link
+field_name: field_cta_button_link
+entity_type: block_content
+bundle: image_with_text_card
+label: 'CTA button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link
