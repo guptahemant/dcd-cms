@@ -17,6 +17,19 @@ function dcd_preprocess_page(array &$variables) {
 
   $variables['top_banner_text'] = theme_get_setting('top_banner_text');
   $variables['footer_text'] = theme_get_setting('footer_text');
+  $footer_headline = theme_get_setting('footer_headline');
+
+  // Prepare it as processed_text render array.
+  if (!empty($footer_headline['value'])) {
+    $variables['footer_headline'] = [
+      '#type' => 'processed_text',
+      '#text' => $footer_headline['value'],
+      '#format' => $footer_headline['format'] ?? 'basic_html',
+    ];
+  }
+  else {
+    $variables['footer_headline'] = [];
+  }
 }
 
 /**
@@ -47,5 +60,13 @@ function dcd_form_system_theme_settings_alter(array &$form, FormStateInterface $
     '#title' => t('Footer Text'),
     '#default_value' => theme_get_setting('footer_text'),
     '#description' => t('Enter the text to be shown in the footer.'),
+  ];
+
+  $form['dcd_footer']['footer_headline'] = [
+    '#type' => 'text_format',
+    '#title' => t('Footer Headline'),
+    '#default_value' => theme_get_setting('footer_headline')['value'] ?? '',
+    '#format' => theme_get_setting('footer_headline')['format'] ?? 'basic_html',
+    '#description' => t('Enter the text to be shown in the footer as headline.'),
   ];
 }
