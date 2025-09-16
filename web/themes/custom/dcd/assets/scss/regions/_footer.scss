@@ -100,6 +100,21 @@ footer {
     }
   }
 
+  .footer-headline {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: center;
+    max-width: fit-content;
+    color: $text-light;
+
+    h3 {
+      font-size: 26px;
+      font-family: Geist;
+      font-weight: 500;
+      color: $text-light;
+    }
+  }
+
   /* --- Responsive Layout --- */
   @media (min-width: 768px) {
     .region--top-footer {
@@ -116,6 +131,14 @@ footer {
             max-width: 176px;
           }
         }
+      }
+    }
+
+    .footer-headline {
+      text-align: left;
+
+      h3 {
+        font-size: 44px;
       }
     }
   }

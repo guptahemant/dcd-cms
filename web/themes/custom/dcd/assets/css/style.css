@@ -315,6 +315,19 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a {
 footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover {
   opacity: 0.8;
 }
+footer .footer-headline {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: center;
+  max-width: fit-content;
+  color: #ffffff;
+}
+footer .footer-headline h3 {
+  font-size: 26px;
+  font-family: Geist;
+  font-weight: 500;
+  color: #ffffff;
+}
 @media (min-width: 768px) {
   footer .region--top-footer .block-menu ul.menu.menu--level-1 {
     flex-direction: row;
@@ -326,6 +339,12 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   footer .region--top-footer .block-menu ul.menu.menu--level-1 li.menu__item--has-children {
     width: 100%;
     max-width: 176px;
+  }
+  footer .footer-headline {
+    text-align: left;
+  }
+  footer .footer-headline h3 {
+    font-size: 44px;
   }
 }
 
