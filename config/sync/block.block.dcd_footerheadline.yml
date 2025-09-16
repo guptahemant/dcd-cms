@@ -1,0 +1,25 @@
+uuid: e5fed486-73b4-4ab4-a21d-b259f6604931
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_block:d02ef923-1956-4e4e-b525-50fb28fd56c4'
+  module:
+    - block_content
+  theme:
+    - dcd
+id: dcd_footerheadline
+theme: dcd
+region: top_footer
+weight: -5
+provider: null
+plugin: 'block_content:d02ef923-1956-4e4e-b525-50fb28fd56c4'
+settings:
+  id: 'block_content:d02ef923-1956-4e4e-b525-50fb28fd56c4'
+  label: 'Footer Headline'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
