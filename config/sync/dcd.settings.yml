@@ -12,3 +12,6 @@ site_branding_bg_color: default
 base_primary_color: '#1b9ae4'
 top_banner_text: 'Drupal camp Delhi coming soon!'
 footer_text: 'Join drupal camp!'
+footer_headline:
+  value: '<h3>Learn, connect, and Grow</h3><p>#Drupal2025 #Bettertogether #techvibe #Collaborate</p>'
+  format: content_format

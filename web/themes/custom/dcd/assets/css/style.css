@@ -315,14 +315,14 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a {
 footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover {
   opacity: 0.8;
 }
-footer #block-dcd-footerheadline .text-content {
+footer .footer-headline {
   margin-left: 0;
   margin-right: auto;
   text-align: center;
   max-width: fit-content;
   color: #ffffff;
 }
-footer #block-dcd-footerheadline .text-content h3 {
+footer .footer-headline h3 {
   font-size: 26px;
   font-family: Geist;
   font-weight: 500;
@@ -340,10 +340,10 @@ footer #block-dcd-footerheadline .text-content h3 {
     width: 100%;
     max-width: 176px;
   }
-  footer #block-dcd-footerheadline .text-content {
+  footer .footer-headline {
     text-align: left;
   }
-  footer #block-dcd-footerheadline .text-content h3 {
+  footer .footer-headline h3 {
     font-size: 44px;
   }
 }
