@@ -9,7 +9,7 @@ dependencies:
 id: dcd_socialmedialinks
 theme: dcd
 region: header
-weight: -2
+weight: -3
 provider: null
 plugin: social_media_links_block
 settings:

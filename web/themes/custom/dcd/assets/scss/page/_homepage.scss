@@ -6,3 +6,36 @@
   color: $text-brown;
   text-align: center;
 }
+
+.block-page-title-block {
+  background-color: $blue-400;
+  margin-top: -1px;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  overflow: hidden;
+  grid-column: 1 / -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: url('../images/Vector11.png') no-repeat bottom center;
+    background-size: 100% auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .page-title {
+    display: inline-block;
+    max-width: 600px;
+    font-weight: 600;
+    font-size: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $text-light;
+  }
+}
