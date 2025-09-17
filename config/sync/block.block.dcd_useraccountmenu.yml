@@ -1,22 +1,22 @@
-uuid: 21c64d5b-ceef-42d4-a4d1-56864af0ce67
+uuid: 8e65da2d-2b4c-48ee-9d96-b49563b49537
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.account
   module:
     - system
   theme:
     - dcd
-id: dcd_footer
+id: dcd_useraccountmenu
 theme: dcd
 region: top_footer
-weight: -5
+weight: -6
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:footer'
-  label: Footer
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   label_display: '0'
   provider: system
   level: 1
