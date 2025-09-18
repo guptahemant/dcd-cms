@@ -39,3 +39,9 @@
     color: $text-light;
   }
 }
+
+.node--type-landing-page {
+  header {
+    display: none;
+  }
+}

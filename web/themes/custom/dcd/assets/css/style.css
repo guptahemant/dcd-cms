@@ -394,4 +394,95 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   color: #ffffff;
 }
 
+.node--type-landing-page header {
+  display: none;
+}
+
+.hero-banner-block .field--name-field-media-image {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.hero-banner-block .field--name-field-media-image .field__item {
+  background: rgba(0, 0, 0, 0.8784313725);
+}
+.hero-banner-block .field--name-field-media-image .field__item img {
+  opacity: 0.5;
+}
+.hero-banner-block .field--name-body .field__item {
+  position: relative;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-banner-block .field--name-body h2 {
+  text-align: center;
+  font-family: "Brightwall", serif;
+  font-size: 20px;
+  color: #ACDEEC;
+  margin: 0;
+}
+.hero-banner-block .field--name-body h4 {
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.hero-banner-block .field--name-body p {
+  font-family: "Geist", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+.hero-banner-block .field--name-field-cta-button-link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -21px;
+}
+.hero-banner-block .field--name-field-cta-button-link a {
+  display: block;
+  color: white;
+}
+@media (min-width: 768px) {
+  .hero-banner-block .field--name-body .field__item {
+    position: relative;
+    left: 7rem;
+    top: 10rem;
+  }
+  .hero-banner-block .field--name-body h2 {
+    font-size: 70px;
+    color: #ACDEEC;
+  }
+  .hero-banner-block .field--name-body h4 {
+    font-size: 28px;
+  }
+  .hero-banner-block .field--name-field-cta-button-link {
+    top: 11rem;
+    left: 7rem;
+  }
+  .hero-banner-block .field--name-field-cta-button-link .field__item a {
+    display: block;
+    color: white;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border-radius: 99px;
+    border-width: 1px;
+    background: #293A80;
+    text-decoration: none;
+  }
+  .hero-banner-block .field--name-field-cta-button-link .field__item a:hover {
+    text-decoration: underline;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
