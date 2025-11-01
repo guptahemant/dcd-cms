@@ -1,0 +1,15 @@
+uuid: 843a3a6b-6a21-49f4-8e5d-cbb4c005c8ff
+langcode: en
+status: true
+dependencies: {  }
+name: google_register
+label: 'Google Register'
+triggers:
+  registration: registration
+destination_path: 'internal:/user/[user:id]/profile'
+pages_type: 1
+pages: 'user/login/google/*'
+language: ''
+roles: {  }
+weight: 0
+enabled: true

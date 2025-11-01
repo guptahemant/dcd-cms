@@ -11,7 +11,7 @@ id: block_content.hero_banner.body
 field_name: body
 entity_type: block_content
 bundle: hero_banner
-label: Body
+label: 'Event Info detail'
 description: ''
 required: false
 translatable: true

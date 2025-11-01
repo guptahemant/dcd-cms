@@ -44,33 +44,37 @@
  */
 #}
 <div class="layout-container">
+	{% if top_banner_text %}
+		<div class="top-banner">
+			{{ top_banner_text }}
+		</div>
+	{% endif %}
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+	<header role="banner">
+		{{ page.header }}
+	</header>
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+	<main role="main">
+		<a id="main-content" tabindex="-1"></a>
+		{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+		<div class="layout-content">
+			{{ page.content }}
+		</div>
+		{# /.layout-content #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+	</main>
 
-  </main>
+	<footer role="contentinfo">
+		{% if top_banner_text %}
+			<div class="footer-text">
+				{{ footer_text }}
+			</div>
+		{% endif %}
+		{{ page.top_footer }}
+		{{ page.bottom_footer }}
+	</footer>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+</div>
+{# /.layout-container #}

@@ -1,9 +1,6 @@
 global-styling:
-  version: 1.x
   css:
     theme:
       assets/css/style.css: {}
-  js:
-    assets/js/script.js: {}
-  dependencies:
-    - core/jquery
+
+      

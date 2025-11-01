@@ -1,0 +1,64 @@
+uuid: d870040c-a7c9-4f16-ade2-7138d9212676
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block_with_cta
+    - field.field.block_content.text_block_with_cta.body
+    - field.field.block_content.text_block_with_cta.field_cta_button_link
+    - field.field.block_content.text_block_with_cta.field_cta_button_text
+    - field.field.block_content.text_block_with_cta.field_image
+    - field.field.block_content.text_block_with_cta.field_title
+  module:
+    - link
+    - text
+id: block_content.text_block_with_cta.default
+targetEntityType: block_content
+bundle: text_block_with_cta
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_button_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

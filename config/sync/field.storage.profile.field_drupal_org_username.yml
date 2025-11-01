@@ -1,18 +1,18 @@
-uuid: 4b2bcbcb-53ee-4d3c-a251-949e059819dc
+uuid: 84b33b2b-c0c1-4f98-a331-1b83029b5374
 langcode: en
 status: true
 dependencies:
   module:
+    - do_username
     - profile
 id: profile.field_drupal_org_username
 field_name: field_drupal_org_username
 entity_type: profile
-type: string
+type: do_username
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+  max_length: 60
+  do_validate: true
+module: do_username
 locked: false
 cardinality: 1
 translatable: true

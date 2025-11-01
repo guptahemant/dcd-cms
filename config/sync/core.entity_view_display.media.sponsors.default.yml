@@ -1,0 +1,44 @@
+uuid: 39fad61f-1b56-441c-9401-85cc0cdbe2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.sponsors.field_media_image_1
+    - field.field.media.sponsors.field_sponsors_type
+    - image.style.large
+    - media.type.sponsors
+  module:
+    - svg_image
+id: media.sponsors.default
+targetEntityType: media
+bundle: sponsors
+mode: default
+content:
+  field_media_image_1:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sponsors_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

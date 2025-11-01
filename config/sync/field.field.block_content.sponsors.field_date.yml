@@ -1,0 +1,21 @@
+uuid: 4e2dc72a-b3e2-4d50-a54a-988741b7c4e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsors
+    - field.storage.block_content.field_date
+  module:
+    - datetime
+id: block_content.sponsors.field_date
+field_name: field_date
+entity_type: block_content
+bundle: sponsors
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

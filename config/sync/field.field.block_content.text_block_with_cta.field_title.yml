@@ -1,14 +1,14 @@
-uuid: deceab8d-0508-478d-98a3-c0c45bd9ed3c
+uuid: 7876c2b4-717f-4018-8783-6be9684134ec
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero_banner
+    - block_content.type.text_block_with_cta
     - field.storage.block_content.field_title
-id: block_content.hero_banner.field_title
+id: block_content.text_block_with_cta.field_title
 field_name: field_title
 entity_type: block_content
-bundle: hero_banner
+bundle: text_block_with_cta
 label: Title
 description: ''
 required: true

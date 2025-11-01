@@ -3,12 +3,12 @@ _core:
 langcode: en
 uuid: f2f970de-1c74-4fde-a0cc-cb314087086e
 name: Drupal
-mail: ''
+mail: admin@admin.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

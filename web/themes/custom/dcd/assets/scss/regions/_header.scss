@@ -1,0 +1,178 @@
+@use '../abstracts/variables' as *;
+@use '../base/mixins' as *;
+
+// header styling for front page
+.path-frontpage {
+  header[role="banner"] {
+    background-color: transparent;
+
+    #block-dcd-main-menu .menu__link {
+      color: $text-muted;
+
+      &:hover {
+        color: $text-grey;
+      }
+    }
+
+    #block-dcd-socialmedialinks a {
+      .fab {
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+// header styling for node pages
+
+/* Header container */
+header[role="banner"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+  background-color: $blue-400;
+}
+
+#block-dcd-main-menu {
+  flex: 1;
+}
+
+/* Navigation menu on left */
+#block-dcd-main-menu .menu--level-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+}
+
+#block-dcd-main-menu .menu__link {
+  text-decoration: none;
+  color: $text-light;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#block-dcd-main-menu .menu__link:hover {
+  color: $blue-800;
+}
+
+/* Center logo */
+.block-system-branding-block {
+  background: none;
+}
+
+.site-branding {
+  margin: 0;
+  min-width: 0;
+}
+
+.site-branding__logo img {
+  height: 100px;
+  width: auto;
+  max-height: 200px;
+}
+
+/* Social icons on right */
+#block-dcd-socialmedialinks ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  justify-content: center;
+}
+
+#block-dcd-socialmedialinks a {
+  color: $text-light;
+  transition: color 0.3s ease;
+
+  .fab {
+    font-size: 20px;
+  }
+}
+
+#block-dcd-socialmedialinks a:hover {
+  color: #007bff;
+}
+
+#block-dcd-account-menu {
+  margin-left: 1rem;
+}
+
+/* Account menu links on right */
+#block-dcd-account-menu .menu--level-1 {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0 15px 0 0;
+  list-style: none;
+}
+
+#block-dcd-account-menu .menu__link {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+#block-dcd-account-menu .menu__link:hover {
+  color: #007bff;
+}
+
+/* Register button style */
+#block-dcd-account-menu .menu__item .menu__link {
+  @include primary-button;
+}
+
+@media (min-width: 768px) {
+  header[role="banner"] {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+  }
+
+  /* Left nav inline */
+  #block-dcd-main-menu .menu--level-1 {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  /* Center logo */
+  .site-branding {
+    position: absolute;
+    left: 50%;
+    top: -23px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .site-branding__logo img {
+    min-height: 250px;
+  }
+
+  /* Right side (social + button) */
+  #block-dcd-socialmedialinks ul {
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  #block-dcd-account-menu {
+    margin-left: 1rem;
+  }
+
+  #block-dcd-account-menu a {
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+}

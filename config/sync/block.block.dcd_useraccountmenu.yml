@@ -1,0 +1,25 @@
+uuid: 8e65da2d-2b4c-48ee-9d96-b49563b49537
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - dcd
+id: dcd_useraccountmenu
+theme: dcd
+region: top_footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

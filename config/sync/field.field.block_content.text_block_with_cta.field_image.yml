@@ -1,18 +1,18 @@
-uuid: 2b397ff9-5121-455c-a2a3-4547b3b19745
+uuid: 0e134336-1726-4884-8c1f-d6ade05918e2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.profile.field_photo
+    - block_content.type.text_block_with_cta
+    - field.storage.block_content.field_image
     - media.type.image
-    - profile.type.profile
-id: profile.profile.field_photo
-field_name: field_photo
-entity_type: profile
-bundle: profile
-label: Photo
+id: block_content.text_block_with_cta.field_image
+field_name: field_image
+entity_type: block_content
+bundle: text_block_with_cta
+label: 'Background Image'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

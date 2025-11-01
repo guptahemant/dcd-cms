@@ -1,0 +1,20 @@
+uuid: 507c1a3e-f0af-4bb6-9cfe-c42b3bfb0f2a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dcd
+id: dcd_tabs
+theme: dcd
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

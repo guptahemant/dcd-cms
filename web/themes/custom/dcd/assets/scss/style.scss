@@ -1,5 +1,9 @@
-$bg: #e0e0e0;
-.box {
-  background: $bg;
-  padding: 1rem;
-}
+@use 'abstracts/variables' as *;
+@use 'base/fonts';
+@use 'base/typography';
+@use 'base/mixins';
+@use 'base/global';
+@use 'regions/header';
+@use 'regions/footer';
+@use 'page/homepage';
+@use 'components/hero-banner';

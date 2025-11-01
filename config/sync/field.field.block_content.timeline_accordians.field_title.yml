@@ -1,0 +1,19 @@
+uuid: cf3c7308-9637-4eb0-bc92-747befe88154
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.timeline_accordians
+    - field.storage.block_content.field_title
+id: block_content.timeline_accordians.field_title
+field_name: field_title
+entity_type: block_content
+bundle: timeline_accordians
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

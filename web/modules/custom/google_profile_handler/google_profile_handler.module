@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains google_profile_handler.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function google_profile_handler_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.google_profile_handler':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module saves Google user profile data to Drupal user profiles when users register via Google authentication.') . '</p>';
+      return $output;
+  }
+}

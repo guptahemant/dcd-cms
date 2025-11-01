@@ -1,0 +1,42 @@
+uuid: 561b7203-e31b-4ea2-aed5-f8d12350e055
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.timeline_accordians
+    - field.field.block_content.timeline_accordians.body
+    - field.field.block_content.timeline_accordians.field_date
+    - field.field.block_content.timeline_accordians.field_title
+  module:
+    - datetime
+    - text
+id: block_content.timeline_accordians.default
+targetEntityType: block_content
+bundle: timeline_accordians
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

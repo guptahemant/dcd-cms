@@ -1,0 +1,8 @@
+uuid: ea262bd4-5848-4180-a030-208072b87f4b
+langcode: en
+status: true
+dependencies: {  }
+id: text_block_with_cta
+label: 'Text Block with CTA'
+revision: false
+description: "Text Block with Button Link, Button Text and BG image.\t"

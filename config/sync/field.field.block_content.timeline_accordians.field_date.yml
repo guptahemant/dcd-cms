@@ -1,0 +1,21 @@
+uuid: d3393a24-3e0d-41b7-8c52-8fc01109b110
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.timeline_accordians
+    - field.storage.block_content.field_date
+  module:
+    - datetime
+id: block_content.timeline_accordians.field_date
+field_name: field_date
+entity_type: block_content
+bundle: timeline_accordians
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

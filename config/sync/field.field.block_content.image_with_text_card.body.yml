@@ -1,0 +1,24 @@
+uuid: 6bcfbecf-99a5-45cb-a452-742e719278d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_text_card
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.image_with_text_card.body
+field_name: body
+entity_type: block_content
+bundle: image_with_text_card
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

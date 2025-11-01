@@ -1,0 +1,48 @@
+uuid: 3218f9ce-0491-469c-95b3-4789f3ff20e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsors
+    - field.field.block_content.sponsors.field_cta_button_link
+    - field.field.block_content.sponsors.field_date
+    - field.field.block_content.sponsors.field_image
+  module:
+    - datetime
+    - link
+id: block_content.sponsors.default
+targetEntityType: block_content
+bundle: sponsors
+mode: default
+content:
+  field_cta_button_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

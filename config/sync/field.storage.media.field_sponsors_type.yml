@@ -1,16 +1,16 @@
-uuid: 46f3e4ac-ffa0-4406-b3f7-154f1209cd79
+uuid: c242574f-7a16-475e-807a-bbb2afde940d
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - profile
-id: profile.field_photo
-field_name: field_photo
-entity_type: profile
+    - taxonomy
+id: media.field_sponsors_type
+field_name: field_sponsors_type
+entity_type: media
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

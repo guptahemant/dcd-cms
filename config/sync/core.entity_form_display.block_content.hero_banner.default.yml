@@ -6,47 +6,40 @@ dependencies:
     - block_content.type.hero_banner
     - field.field.block_content.hero_banner.body
     - field.field.block_content.hero_banner.field_cta_button_link
-    - field.field.block_content.hero_banner.field_event_info_detail_items
     - field.field.block_content.hero_banner.field_image
-    - field.field.block_content.hero_banner.field_title
   module:
     - link
     - media_library
+    - text
 id: block_content.hero_banner.default
 targetEntityType: block_content
 bundle: hero_banner
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   field_cta_button_link:
     type: link_default
-    weight: 3
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_event_info_detail_items:
-    type: string_textarea
-    weight: 4
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 2
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_title:
-    type: string_textfield
     weight: 1
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   info:
     type: string_textfield
@@ -56,5 +49,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  body: true
+hidden: {  }

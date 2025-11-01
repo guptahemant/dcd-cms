@@ -1,19 +1,21 @@
-uuid: b2032298-36ba-48e5-a94d-b971fccd5bf2
+uuid: 141deada-4f03-43f3-b4fd-8faf055b3961
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.profile.field_drupal_org_username
     - profile.type.profile
+  module:
+    - do_username
 id: profile.profile.field_drupal_org_username
 field_name: field_drupal_org_username
 entity_type: profile
 bundle: profile
-label: 'drupal.org username'
-description: 'Enter drupal.org username'
+label: 'Drupal.org username'
+description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: do_username

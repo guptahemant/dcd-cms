@@ -2,13 +2,14 @@ name: DCD
 type: theme
 description: 'Drupal camp delhi site built on top of drupal cms'
 core_version_requirement: ^10 || ^11
-base theme: stable9
+# base theme: stable9
+base theme: drupal_cms_olivero
 libraries:
   - dcd/global-styling
+
+
 regions:
   header: Header
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
   content: Content
-  sidebar: Sidebar
-  footer: Footer
+  top_footer: Top Footer
+  bottom_footer: Bottom Footer

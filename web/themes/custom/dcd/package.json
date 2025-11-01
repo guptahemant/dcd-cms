@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass assets/scss:assets/css",
-    "watch": "sass --watch assets/scss:assets/css"
+    "build": "sass assets/scss/style.scss assets/css/style.css",
+    "watch": "sass --watch assets/scss/style.scss:assets/css/style.css"
   },
   "keywords": [],
   "author": "",
