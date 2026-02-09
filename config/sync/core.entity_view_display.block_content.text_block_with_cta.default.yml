@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.text_block_with_cta.field_cta_button_link
     - field.field.block_content.text_block_with_cta.field_cta_button_text
     - field.field.block_content.text_block_with_cta.field_image
+    - field.field.block_content.text_block_with_cta.field_map
     - field.field.block_content.text_block_with_cta.field_title
   module:
     - link
@@ -53,9 +54,16 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_map:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_title:
     type: string
-    label: visually_hidden
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
