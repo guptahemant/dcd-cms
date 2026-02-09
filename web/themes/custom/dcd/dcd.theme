@@ -19,6 +19,65 @@ function dcd_preprocess_page(array &$variables) {
   $variables['footer_text'] = theme_get_setting('footer_text');
 }
 
+// /**
+//  * Implements hook_preprocess_HOOK() for block templates.
+//  *
+//  * Extracts raw map embed URL for text_block_with_cta blocks so the Twig
+//  * template can use it without HTML encoding issues.
+//  */
+// function dcd_preprocess_block(array &$variables) {
+//   $block_content = NULL;
+
+//   // Try standard location first.
+//   if (!empty($variables['content']['#block_content'])) {
+//     $block_content = $variables['content']['#block_content'];
+//   }
+//   // For Layout Builder inline blocks, load from plugin_id + configuration.
+//   if (!$block_content && !empty($variables['plugin_id']) && str_starts_with($variables['plugin_id'], 'inline_block:')) {
+//     $configuration = $variables['configuration'] ?? [];
+//     if (!empty($configuration['block_revision_id'])) {
+//       $block_content = \Drupal::entityTypeManager()
+//         ->getStorage('block_content')
+//         ->loadRevision($configuration['block_revision_id']);
+//     }
+//     // Fallback: scan the content render array for the entity.
+//     if (!$block_content && !empty($variables['content'])) {
+//       foreach ($variables['content'] as $key => $value) {
+//         if (is_array($value) && isset($value['#block_content'])) {
+//           $block_content = $value['#block_content'];
+//           break;
+//         }
+//       }
+//     }
+//   }
+
+//   if ($block_content && $block_content->bundle() === 'text_block_with_cta' && $block_content->hasField('field_map_embed_url')) {
+//     $raw_value = trim($block_content->get('field_map_embed_url')->value ?? '');
+//     $map_url = '';
+//     if ($raw_value) {
+//       // Extract URL using string functions (more reliable than regex).
+//       $src_pos = strpos($raw_value, 'src="');
+//       if ($src_pos !== FALSE) {
+//         $url_start = $src_pos + 5;
+//         $url_end = strpos($raw_value, '"', $url_start);
+//         if ($url_end !== FALSE) {
+//           $map_url = substr($raw_value, $url_start, $url_end - $url_start);
+//         }
+//       }
+//       elseif (str_starts_with($raw_value, 'http')) {
+//         $map_url = $raw_value;
+//       }
+//     }
+//     $variables['map_embed_url'] = $map_url;
+//     \Drupal::logger('dcd')->notice('Map: id=@id src_pos=@sp url_len=@ul from=@from', [
+//       '@id' => $block_content->id(),
+//       '@sp' => $src_pos !== FALSE ? $src_pos : 'false',
+//       '@ul' => strlen($map_url),
+//       '@from' => !empty($variables['content']['#block_content']) ? 'content' : 'config',
+//     ]);
+//   }
+// }
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  */

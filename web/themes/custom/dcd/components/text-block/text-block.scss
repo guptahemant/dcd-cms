@@ -1,0 +1,37 @@
+@use '../../assets/scss/abstracts/variables' as *;
+
+.text-block {
+  padding: 3rem 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: 36px;
+    color: $cyan-400;
+    margin: 0 0 1rem;
+  }
+
+  &__body {
+    font-family: $font-tertiary;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $text-grey;
+
+    p {
+      margin: 0 0 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 4rem 1rem;
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__body {
+      font-size: 18px;
+    }
+  }
+}

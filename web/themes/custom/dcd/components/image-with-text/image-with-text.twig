@@ -1,0 +1,24 @@
+<section class="image-with-text{{ enable_cloud_bg ? ' image-with-text--cloud-bg' : '' }}">
+  <div class="image-with-text__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="image-with-text__content">
+    {% if title %}
+      <h2 class="image-with-text__title">{{ title }}</h2>
+    {% endif %}
+    <div class="image-with-text__body">
+      {% block body %}{% endblock %}
+    </div>
+    {% if speaker_name %}
+      <div class="image-with-text__speaker">
+        <span class="image-with-text__speaker-name">{{ speaker_name }}</span>
+        {% if designation %}
+          <span class="image-with-text__designation">{{ designation }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="image-with-text__cta">
+      {% block cta_link %}{% endblock %}
+    </div>
+  </div>
+</section>

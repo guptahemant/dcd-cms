@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass assets/scss/style.scss assets/css/style.css",
-    "watch": "sass --watch assets/scss/style.scss:assets/css/style.css"
+    "build:global": "sass assets/scss/style.scss assets/css/style.css",
+    "build:components": "sass --no-source-map components/:components/",
+    "build": "npm run build:global && npm run build:components",
+    "watch:global": "sass --watch assets/scss/style.scss:assets/css/style.css",
+    "watch:components": "sass --watch --no-source-map components/:components/",
+    "watch": "npm run watch:global & npm run watch:components"
   },
   "keywords": [],
   "author": "",

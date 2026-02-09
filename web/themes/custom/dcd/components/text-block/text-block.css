@@ -1,0 +1,31 @@
+.text-block {
+  padding: 3rem 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.text-block__title {
+  font-family: "Brightwall", serif;
+  font-size: 36px;
+  color: #293A80;
+  margin: 0 0 1rem;
+}
+.text-block__body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2F3941;
+}
+.text-block__body p {
+  margin: 0 0 1rem;
+}
+@media (min-width: 768px) {
+  .text-block {
+    padding: 4rem 1rem;
+  }
+  .text-block__title {
+    font-size: 48px;
+  }
+  .text-block__body {
+    font-size: 18px;
+  }
+}

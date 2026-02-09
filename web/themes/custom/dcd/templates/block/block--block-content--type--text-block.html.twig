@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Block template for Text Block block type.
+ * Bridges Drupal content fields to the dcd:text-block SDC component.
+ */
+#}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% embed 'dcd:text-block' with {
+    title: content.field_text_title|render|striptags|trim,
+  } %}
+    {% block body %}
+      {{ content.body }}
+    {% endblock %}
+  {% endembed %}
+</div>

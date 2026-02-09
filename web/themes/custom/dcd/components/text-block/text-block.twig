@@ -1,0 +1,8 @@
+<section class="text-block">
+  {% if title %}
+    <h2 class="text-block__title">{{ title }}</h2>
+  {% endif %}
+  <div class="text-block__body">
+    {% block body %}{% endblock %}
+  </div>
+</section>
