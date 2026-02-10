@@ -13,9 +13,7 @@ dependencies:
     - node.type.event
     - node.type.page
     - node.type.person
-    - workflows.workflow.basic_editorial
   module:
-    - content_moderation
     - contextual
     - file
     - filter
@@ -77,13 +75,9 @@ permissions:
   - 'edit any svg_image media'
   - 'revert all revisions'
   - 'schedule publishing of nodes'
-  - 'use basic_editorial transition create_new_draft'
-  - 'use basic_editorial transition publish'
-  - 'use basic_editorial transition unpublish'
   - 'use text format content_format'
   - 'use text format full_html'
   - 'view all revisions'
-  - 'view any unpublished content'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view scheduled content'

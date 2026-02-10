@@ -27,6 +27,7 @@ permissions:
   - 'bypass honeypot protection'
   - 'create papers content'
   - 'delete own files'
+  - 'edit any papers content'
   - 'edit own papers content'
   - 'skip CAPTCHA'
   - 'use klaro'
