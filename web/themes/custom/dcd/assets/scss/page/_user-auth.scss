@@ -211,4 +211,12 @@
       line-height: 2;
     }
   }
+
+  .block-social-auth-login {
+    max-width: 640px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 }

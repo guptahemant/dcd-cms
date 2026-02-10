@@ -694,5 +694,12 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
     line-height: 2;
   }
 }
+.path-user .block-social-auth-login {
+  max-width: 640px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
 /*# sourceMappingURL=style.css.map */
