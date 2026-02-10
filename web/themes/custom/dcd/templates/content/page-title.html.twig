@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * DCD theme override for a page title.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - subtitle: Optional subtitle text (set via dcd_preprocess_page_title).
+ */
+#}
+{%
+  set classes = [
+    'title',
+    'page-title',
+  ]
+%}
+
+{{ title_prefix }}
+{% if (title|render|striptags|trim is not empty) %}
+  <h1{{ title_attributes.addClass(classes) }}>{{ title }}</h1>
+  {% if subtitle is defined and subtitle %}
+    <p class="page-title__subtitle">{{ subtitle }}</p>
+  {% endif %}
+{% endif %}
+{{ title_suffix }}
