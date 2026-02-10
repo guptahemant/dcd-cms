@@ -1,0 +1,24 @@
+name: Text Block with CTA
+status: experimental
+description: A text section with a script heading, body text, CTA button, and optional image.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The section heading displayed in script font.
+    map_embed_url:
+      type: string
+      title: Map Embed URL
+      description: Google Maps embed URL for rendering an interactive map.
+slots:
+  body:
+    title: Body Content
+    description: The body text render array.
+  cta:
+    title: Call to Action
+    description: The CTA button/link render array.
+  image:
+    title: Image
+    description: Optional image render array.

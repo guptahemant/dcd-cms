@@ -1,0 +1,33 @@
+name: Image with Text
+status: experimental
+description: A flexible image and text layout with optional cloud background.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The section heading.
+    speaker_name:
+      type: string
+      title: Speaker Name
+      description: Optional speaker or person name.
+    designation:
+      type: string
+      title: Designation
+      description: Optional designation or role.
+    enable_cloud_bg:
+      type: boolean
+      title: Enable Cloud Background
+      description: Whether to show the cloud background decoration.
+      default: false
+slots:
+  image:
+    title: Image
+    description: The image render array.
+  body:
+    title: Body Content
+    description: The body text render array.
+  cta_link:
+    title: CTA Link
+    description: Optional call-to-action link render array.

@@ -1,14 +1,39 @@
 @use '../abstracts/variables' as *;
 
+.footer-vector {
+  background: $cyan-500;
+  line-height: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.3;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
   background: $cyan-500;
   color: $text-light;
-  padding: 120px 40px 30px 40px;
+  padding: 100px 40px 30px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 19px;
+    background: url(../images/Vector11.png) no-repeat bottom center;
+    background-size: 100% auto;
+    pointer-events: none;
+    z-index: 1;
+  }
 
   .footer-text {
     font-size: 2.5rem;

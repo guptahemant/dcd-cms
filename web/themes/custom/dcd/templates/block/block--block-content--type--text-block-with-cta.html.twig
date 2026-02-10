@@ -1,8 +1,8 @@
 {#
 /**
  * @file
- * Block template for Hero Banner block type.
- * Bridges Drupal content fields to the dcd:hero-banner SDC component.
+ * Block template for Text Block with CTA block type.
+ * Bridges Drupal content fields to the dcd:text-block-with-cta SDC component.
  */
 #}
 
@@ -11,25 +11,24 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    layout ? 'layout--' ~ layout|clean_class,
-    'hero-banner-block',
   ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
-  {% embed 'dcd:hero-banner' with {
-    vector_path: '/' ~ active_theme_path() ~ '/assets/images/Vector11.png',
+  {% embed 'dcd:text-block-with-cta' with {
+    title: content.field_title|render|striptags|trim,
+    map_embed_url: content.field_map,
   } %}
-    {% block image %}
-      {{ content.field_image }}
-    {% endblock %}
     {% block body %}
       {{ content.body }}
     {% endblock %}
     {% block cta %}
       {{ content.field_cta_button_link }}
+    {% endblock %}
+    {% block image %}
+      {{ content.field_image }}
     {% endblock %}
   {% endembed %}
 </div>

@@ -1,0 +1,16 @@
+<section class="hero-banner">
+  <div class="hero-banner__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="hero-banner__body">
+    {% block body %}{% endblock %}
+  </div>
+  {% if vector_path %}
+    <div class="hero-banner__vector">
+      <img src="{{ vector_path }}" alt="">
+    </div>
+  {% endif %}
+  <div class="hero-banner__cta">
+    {% block cta %}{% endblock %}
+  </div>
+</section>

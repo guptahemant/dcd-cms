@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.content_format
+    - filter.format.full_html
     - media.type.document
     - media.type.image
     - media.type.remote_video
@@ -80,6 +81,7 @@ permissions:
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'
   - 'use text format content_format'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view own unpublished content'

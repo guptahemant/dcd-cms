@@ -12,7 +12,7 @@ entity_type: block_content
 bundle: text_block_with_cta
 label: 'Background Image'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

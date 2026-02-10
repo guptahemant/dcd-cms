@@ -1,0 +1,22 @@
+<section class="text-block-with-cta">
+  <div class="text-block-with-cta__content">
+    {% if title %}
+      <h2 class="text-block-with-cta__title">{{ title }}</h2>
+    {% endif %}
+    <div class="text-block-with-cta__body">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="text-block-with-cta__cta">
+      {% block cta %}{% endblock %}
+    </div>
+  </div>
+  {% if map_embed_url %}
+    <div class="text-block-with-cta__map">
+      {{ map_embed_url }}
+    </div>
+  {% else %}
+    <div class="text-block-with-cta__image">
+      {% block image %}{% endblock %}
+    </div>
+  {% endif %}
+</section>
