@@ -49,6 +49,7 @@
   text-decoration: none;
 }
 .text-block-with-cta__cta a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 .text-block-with-cta__image img {

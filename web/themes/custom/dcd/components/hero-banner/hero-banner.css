@@ -110,7 +110,8 @@
   font-weight: 600;
 }
 .hero-banner__cta a:hover {
-  text-decoration: underline;
+  color: rgb(41, 58, 128);
+  background: rgb(255, 255, 255);
 }
 @media (min-width: 768px) {
   .hero-banner {
