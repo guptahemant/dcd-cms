@@ -1,9 +1,19 @@
 uuid: d6c80c6b-73cd-4428-bcfe-68c84336ce16
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - comment
+    - field_permissions
 id: track_team_lead
 label: 'Track team lead'
 weight: 6
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access comments'
+  - 'create field_rating'
+  - 'edit own comments'
+  - 'edit own field_rating'
+  - 'post comments'
+  - 'view field_rating'
+  - 'view own field_rating'

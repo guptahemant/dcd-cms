@@ -3,10 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.blog
-    - node.type.event
-    - node.type.page
-    - node.type.person
+    - node.type.papers
   module:
     - content_moderation
 _core:
@@ -16,48 +13,85 @@ label: Basic
 type: content_moderation
 type_settings:
   states:
+    backup:
+      label: Backup
+      weight: 4
+      published: false
+      default_revision: false
     draft:
       label: Draft
       weight: -1
       published: false
       default_revision: false
+    in_review:
+      label: 'In review'
+      weight: 5
+      published: true
+      default_revision: false
     published:
-      label: Published
+      label: Submitted
       weight: 0
       published: true
       default_revision: true
+    rejected:
+      label: Rejected
+      weight: 3
+      published: true
+      default_revision: false
+    seleted:
+      label: Seleted
+      weight: 2
+      published: true
+      default_revision: false
     unpublished:
-      label: Unpublished
+      label: 'Withdraw submission'
       weight: 1
-      published: false
-      default_revision: true
+      published: true
+      default_revision: false
   transitions:
+    backup:
+      label: Backup
+      from:
+        - in_review
+      to: backup
+      weight: 4
     create_new_draft:
       label: 'Create new draft'
       from:
-        - unpublished
         - draft
-        - published
       to: draft
       weight: -1
+    in_review:
+      label: 'In review'
+      from:
+        - published
+      to: in_review
+      weight: 3
     publish:
       label: Publish
       from:
         - draft
-        - published
-        - unpublished
       to: published
       weight: 0
+    rejected:
+      label: Rejected
+      from:
+        - in_review
+      to: rejected
+      weight: 5
+    selected:
+      label: Selected
+      from:
+        - in_review
+      to: seleted
+      weight: 2
     unpublish:
-      label: Unpublish
+      label: 'Withdraw submission'
       from:
         - published
       to: unpublished
       weight: 1
   entity_types:
     node:
-      - blog
-      - event
-      - page
-      - person
+      - papers
   default_moderation_state: draft

@@ -1,0 +1,22 @@
+uuid: bf7e7159-3069-4c3f-bba3-6ff738006e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.papers
+  module:
+    - starrating
+id: node.papers.field_rating
+field_name: field_rating
+entity_type: node
+bundle: papers
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  max_value: 5
+field_type: starrating

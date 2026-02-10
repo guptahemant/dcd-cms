@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.review_comment.default
     - field.field.node.papers.field_additional_info
     - field.field.node.papers.field_audience_type
     - field.field.node.papers.field_captivating_introduction
+    - field.field.node.papers.field_comment
     - field.field.node.papers.field_country
     - field.field.node.papers.field_date
     - field.field.node.papers.field_description
@@ -14,6 +16,7 @@ dependencies:
     - field.field.node.papers.field_learning_objectives
     - field.field.node.papers.field_outline
     - field.field.node.papers.field_prerequisite
+    - field.field.node.papers.field_rating
     - field.field.node.papers.field_session_type
     - field.field.node.papers.field_slot
     - field.field.node.papers.field_track
@@ -21,7 +24,9 @@ dependencies:
     - node.type.papers
   module:
     - address
+    - comment
     - datetime
+    - starrating
     - text
     - user
 id: node.papers.default
@@ -29,12 +34,17 @@ targetEntityType: node
 bundle: papers
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_additional_info:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 7
     region: content
   field_audience_type:
     type: entity_reference_label
@@ -42,21 +52,30 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 113
+    weight: 15
     region: content
   field_captivating_introduction:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 3
+    region: content
+  field_comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 17
     region: content
   field_country:
     type: address_country_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 106
+    weight: 8
     region: content
   field_date:
     type: datetime_default
@@ -65,7 +84,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 109
+    weight: 11
     region: content
   field_event:
     type: entity_reference_label
@@ -73,7 +92,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 10
     region: content
   field_first_time_session:
     type: boolean
@@ -83,28 +102,38 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 107
+    weight: 9
     region: content
   field_learning_objectives:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 6
     region: content
   field_outline:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 5
     region: content
   field_prerequisite:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 4
+    region: content
+  field_rating:
+    type: starrating
+    label: above
+    settings:
+      fill_blank: 0
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_session_type:
     type: entity_reference_label
@@ -112,7 +141,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
+    weight: 14
     region: content
   field_slot:
     type: entity_reference_label
@@ -120,7 +149,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 114
+    weight: 16
     region: content
   field_track:
     type: entity_reference_label
@@ -128,7 +157,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 110
+    weight: 12
     region: content
   field_track_category:
     type: entity_reference_label
@@ -136,12 +165,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 111
+    weight: 13
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
   field_description: true
+  rate_paper_rating: true
