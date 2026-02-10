@@ -254,18 +254,41 @@ header[role=banner] {
     padding: 0.5rem 1rem;
   }
 }
+.footer-vector {
+  background: #212E66;
+  line-height: 0;
+}
+.footer-vector img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.3;
+}
+
 footer {
   display: flex;
   flex-direction: column;
   background: #212E66;
   color: #ffffff;
-  padding: 120px 40px 30px 40px;
+  padding: 100px 40px 30px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
   /* --- Top Footer (Menus) --- */
   /* --- Bottom Footer (Social) --- */
   /* --- Responsive Layout --- */
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 19px;
+  background: url(../images/Vector11.png) no-repeat bottom center;
+  background-size: 100% auto;
+  pointer-events: none;
+  z-index: 1;
 }
 footer .footer-text {
   font-size: 2.5rem;
@@ -412,6 +435,98 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
 
 .page-node-type-landing-page .region--content.layout--pass--content-medium {
   display: block;
+}
+
+.path-session-tracks .region--content.layout--pass--content-medium {
+  display: block;
+}
+.path-session-tracks .view-track-detail {
+  max-width: 838px;
+  margin: 0 auto;
+  padding: 120px 1rem;
+}
+.path-session-tracks .view-track-detail .view-header h2 {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.84px;
+  color: #2F3941;
+  margin: 0 0 24px;
+}
+@media (min-width: 768px) {
+  .path-session-tracks .view-track-detail .view-header h2 {
+    font-size: 42px;
+  }
+}
+.path-session-tracks .view-track-detail .item-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.path-session-tracks .view-track-detail .item-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.path-session-tracks .views-field-name .field-content a {
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #293A80;
+  text-decoration: none;
+}
+.path-session-tracks .views-field-name .field-content a:hover {
+  color: #212E66;
+}
+.path-session-tracks .views-field-description__value .field-content,
+.path-session-tracks .views-field-field-target-audience .field-content,
+.path-session-tracks .views-field-field-track-goals .field-content {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #68737D;
+}
+.path-session-tracks .views-field-description__value .field-content p,
+.path-session-tracks .views-field-field-target-audience .field-content p,
+.path-session-tracks .views-field-field-track-goals .field-content p {
+  margin: 0;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content {
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content a {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  background: #D2EBF7;
+  color: #293A80;
+  padding: 0.3rem 0.85rem;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content a:hover {
+  background: #293A80;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .path-session-tracks .view-track-detail {
+    padding: 60px 1rem;
+  }
+  .path-session-tracks .view-track-detail .item-list ul {
+    gap: 40px;
+  }
+  .path-session-tracks .view-track-detail .view-header h2 {
+    margin-bottom: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
