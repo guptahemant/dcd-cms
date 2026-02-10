@@ -7,7 +7,7 @@
     "build:global": "sass assets/scss/style.scss assets/css/style.css",
     "build:components": "sass --no-source-map components/:components/",
     "build": "npm run build:global && npm run build:components",
-    "watch:global": "sass --watch assets/scss/style.scss:assets/css/style.css",
+    "watch:global": "sass --watch --poll assets/scss/style.scss:assets/css/style.css",
     "watch:components": "sass --watch --no-source-map components/:components/",
     "watch": "npm run watch:global & npm run watch:components"
   },

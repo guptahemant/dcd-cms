@@ -416,6 +416,15 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   text-transform: uppercase;
   color: #ffffff;
 }
+.block-page-title-block .page-title__subtitle {
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 12px;
+  text-align: center;
+}
 
 .node--type-landing-page header {
   display: none;
@@ -526,6 +535,163 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   }
   .path-session-tracks .view-track-detail .view-header h2 {
     margin-bottom: 16px;
+  }
+}
+
+.path-user .block-page-title-block .page-title {
+  max-width: max-content;
+  margin-bottom: 0rem;
+}
+.path-user .region--content.layout--pass--content-medium {
+  display: block;
+}
+.path-user .block-local-tasks-block {
+  max-width: 664px;
+  margin: 0 auto;
+}
+.path-user .block-system-main-block {
+  max-width: 664px;
+  margin: 0 auto;
+  padding: 120px 1rem;
+}
+.path-user .user-login-form::before {
+  content: "LOGIN";
+  display: block;
+  font-family: "Brightwall", serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 2.5;
+  color: #ACDEEC;
+  margin-bottom: 12px;
+}
+.path-user .user-register-form::before {
+  content: "REGISTER";
+  display: block;
+  font-family: "Brightwall", serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 2.5;
+  color: #ACDEEC;
+  margin-bottom: 12px;
+}
+.path-user .user-login-form > .form-item:first-of-type::before {
+  content: "Welcome back! Please enter your details.";
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #68737D;
+  margin-bottom: 28px;
+}
+.path-user .user-register-form > .form-wrapper:first-of-type::before {
+  content: "Create your account to get started.";
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #68737D;
+  margin-bottom: 28px;
+}
+.path-user .form-item__label {
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2D2D2D;
+}
+.path-user .form-item__label.form-required::after {
+  color: #FF2370;
+}
+.path-user .form-element {
+  width: 100%;
+  height: 44px;
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  border: 1px solid #C2C8CC;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #2D2D2D;
+  margin-top: 6px;
+  box-sizing: border-box;
+}
+.path-user .form-element:focus {
+  border-color: #293A80;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(41, 58, 128, 0.15);
+}
+.path-user textarea.form-element {
+  height: auto;
+  min-height: 88px;
+}
+.path-user .form-item__description {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #68737D;
+  margin-top: 6px;
+}
+.path-user .form-item {
+  margin-bottom: 12px;
+}
+.path-user .form-wrapper {
+  margin-bottom: 12px;
+}
+.path-user .olivero-details {
+  border: 1px solid #C2C8CC;
+  border-radius: 6px;
+  margin-top: 24px;
+}
+.path-user .olivero-details .olivero-details__summary {
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2D2D2D;
+  padding: 16px;
+}
+.path-user .olivero-details .olivero-details__wrapper {
+  padding: 0 16px 16px;
+}
+.path-user .form-actions {
+  margin-top: 42px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.path-user .button--primary {
+  display: inline-block;
+  width: 100%;
+  max-width: 488px;
+  height: 46px;
+  background: #293A80;
+  border: 1px solid #293A80;
+  border-radius: 99px;
+  padding: 12px 20px;
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.05);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.path-user .button--primary:hover {
+  background: #212E66;
+  border-color: #212E66;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.1);
+}
+@media (max-width: 767px) {
+  .path-user .block-system-main-block {
+    padding: 60px 1rem;
+  }
+  .path-user .user-login-form::before,
+  .path-user .user-register-form::before {
+    font-size: 48px;
+    line-height: 2;
   }
 }
 

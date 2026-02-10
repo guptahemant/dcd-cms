@@ -1,0 +1,214 @@
+@use '../abstracts/variables' as *;
+
+// Login & Register pages — /user/login, /user/register
+.path-user {
+
+  .block-page-title-block .page-title {
+    max-width: max-content;
+    margin-bottom: 0rem;
+  }
+
+  // Break out of Olivero grid
+  .region--content.layout--pass--content-medium {
+    display: block;
+  }
+
+  .block-local-tasks-block {
+    max-width: 664px;
+    margin: 0 auto;
+  }
+
+  // Form section container
+  .block-system-main-block {
+    max-width: 664px;
+    margin: 0 auto;
+    padding: 120px 1rem;
+  }
+
+  // =====================
+  // Decorative script heading via ::before
+  // =====================
+  .user-login-form::before {
+    content: 'LOGIN';
+    display: block;
+    font-family: $font-secondary;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 2.5;
+    color: $blue-primary;
+    margin-bottom: 12px;
+  }
+
+  .user-register-form::before {
+    content: 'REGISTER';
+    display: block;
+    font-family: $font-secondary;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 2.5;
+    color: $blue-primary;
+    margin-bottom: 12px;
+  }
+
+  // Supporting text via ::after on script heading's parent
+  .user-login-form > .form-item:first-of-type::before {
+    content: 'Welcome back! Please enter your details.';
+    display: block;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $text-light-gray;
+    margin-bottom: 28px;
+  }
+
+  .user-register-form > .form-wrapper:first-of-type::before {
+    content: 'Create your account to get started.';
+    display: block;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $text-light-gray;
+    margin-bottom: 28px;
+  }
+
+  // =====================
+  // Form labels
+  // =====================
+  .form-item__label {
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $text-dark;
+
+    // Required asterisk
+    &.form-required::after {
+      color: #FF2370;
+    }
+  }
+
+  // =====================
+  // Form inputs
+  // =====================
+  .form-element {
+    width: 100%;
+    height: 44px;
+    font-family: $font-primary;
+    font-size: 16px;
+    border: 1px solid #C2C8CC;
+    border-radius: 6px;
+    padding: 10px 12px;
+    background: #fff;
+    color: $text-dark;
+    margin-top: 6px;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $cyan-400;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($cyan-400, 0.15);
+    }
+  }
+
+  // Textarea inputs (register form has details/descriptions)
+  textarea.form-element {
+    height: auto;
+    min-height: 88px;
+  }
+
+  // =====================
+  // Form descriptions / help text
+  // =====================
+  .form-item__description {
+    font-family: $font-primary;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $text-light-gray;
+    margin-top: 6px;
+  }
+
+  // =====================
+  // Form items spacing
+  // =====================
+  .form-item {
+    margin-bottom: 12px;
+  }
+
+  .form-wrapper {
+    margin-bottom: 12px;
+  }
+
+  // =====================
+  // Details/fieldset (register form — User Profile)
+  // =====================
+  .olivero-details {
+    border: 1px solid #C2C8CC;
+    border-radius: 6px;
+    margin-top: 24px;
+
+    .olivero-details__summary {
+      font-family: $font-primary;
+      font-size: 18px;
+      font-weight: 600;
+      color: $text-dark;
+      padding: 16px;
+    }
+
+    .olivero-details__wrapper {
+      padding: 0 16px 16px;
+    }
+  }
+
+  // =====================
+  // Submit button
+  // =====================
+  .form-actions {
+    margin-top: 42px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button--primary {
+    display: inline-block;
+    width: 100%;
+    max-width: 488px;
+    height: 46px;
+    background: $cyan-400;
+    border: 1px solid $cyan-400;
+    border-radius: 99px;
+    padding: 12px 20px;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(16, 24, 40, 0.05);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      background: $cyan-500;
+      border-color: $cyan-500;
+      box-shadow: 0 2px 8px rgba(16, 24, 40, 0.1);
+    }
+  }
+
+  // =====================
+  // Responsive — mobile adjustments
+  // =====================
+  @media (max-width: 767px) {
+    .block-system-main-block {
+      padding: 60px 1rem;
+    }
+
+    .user-login-form::before,
+    .user-register-form::before {
+      font-size: 48px;
+      line-height: 2;
+    }
+  }
+}
