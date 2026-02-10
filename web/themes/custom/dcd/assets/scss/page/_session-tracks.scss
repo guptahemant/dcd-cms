@@ -1,0 +1,118 @@
+@use '../abstracts/variables' as *;
+
+// Session Tracks page — /session-tracks
+// Matches Figma node 409:5702
+.path-session-tracks {
+
+  // Break out of Olivero grid (same pattern as landing pages)
+  .region--content.layout--pass--content-medium {
+    display: block;
+  }
+
+  // View container — 120px vertical padding, centered
+  .view-track-detail {
+    max-width: 838px;
+    margin: 0 auto;
+    padding: 120px 1rem;
+  }
+
+  // Section heading from view header
+  .view-track-detail .view-header h2 {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.84px;
+    color: $text-grey;
+    margin: 0 0 24px;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+  }
+
+  // List reset — flex column, 60px gap between tracks
+  .view-track-detail .item-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  // Track items — simple vertical stack, no card styling
+  .view-track-detail .item-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // Track name
+  .views-field-name .field-content a {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+    color: $cyan-400;
+    text-decoration: none;
+
+    &:hover {
+      color: $cyan-500;
+    }
+  }
+
+  // Body text — all text fields share the same style
+  .views-field-description__value .field-content,
+  .views-field-field-target-audience .field-content,
+  .views-field-field-track-goals .field-content {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $text-light-gray;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // Keyword pills
+  .views-field-field-track-keyword .field-content {
+    font-size: 0; // hide commas between links
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a {
+      font-family: $font-primary;
+      font-size: 14px;
+      background: $bg-blue;
+      color: $cyan-400;
+      padding: 0.3rem 0.85rem;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: $cyan-400;
+        color: #fff;
+      }
+    }
+  }
+
+  // Responsive — smaller padding on mobile
+  @media (max-width: 767px) {
+    .view-track-detail {
+      padding: 60px 1rem;
+    }
+
+    .view-track-detail .item-list ul {
+      gap: 40px;
+    }
+
+    .view-track-detail .view-header h2 {
+      margin-bottom: 16px;
+    }
+  }
+}
