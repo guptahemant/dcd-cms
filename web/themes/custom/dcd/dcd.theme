@@ -39,6 +39,25 @@ function dcd_preprocess_page_title(array &$variables) {
     $variables['title'] = $titles[$route]['title'];
     $variables['subtitle'] = $titles[$route]['subtitle'];
   }
+
+  // Override node add form titles by content type.
+  if ($route === 'node.add') {
+    $node_type = \Drupal::routeMatch()->getParameter('node_type');
+    if ($node_type) {
+      $type_id = $node_type->id();
+      $node_titles = [
+        'papers' => [
+          'title' => t('Propose a Session'),
+          'subtitle' => t('Submit your session proposal for Drupal Camp Delhi 2026.'),
+        ],
+      ];
+
+      if (isset($node_titles[$type_id])) {
+        $variables['title'] = $node_titles[$type_id]['title'];
+        $variables['subtitle'] = $node_titles[$type_id]['subtitle'];
+      }
+    }
+  }
 }
 
 /**
