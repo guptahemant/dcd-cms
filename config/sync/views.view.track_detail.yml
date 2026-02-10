@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_target_audience
     - field.storage.taxonomy_term.field_track_goals
     - field.storage.taxonomy_term.field_track_keyword
+    - system.menu.main
     - taxonomy.vocabulary.track
   module:
     - taxonomy
@@ -24,7 +25,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Track detail'
+      title: 'Session Tracks'
       fields:
         name:
           id: name
@@ -84,7 +85,7 @@ display:
           entity_type: taxonomy_term
           entity_field: description
           plugin_id: field
-          label: 'Track Description'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -117,7 +118,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -146,7 +147,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Target Audience'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -208,7 +209,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Track Goals'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -270,7 +271,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Track Keyword'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -382,7 +383,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2 class="session-track__title">Session Tracks</h2>'
+            format: content_format
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -403,6 +417,15 @@ display:
       display_description: ''
       display_extenders: {  }
       path: session-tracks
+      menu:
+        type: normal
+        title: 'Session Tracks'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
