@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Brightwall";
   src: url("../fonts/BrightwallPersonalUseOnly-Reg.woff2") format("woff2");
@@ -254,18 +254,41 @@ header[role=banner] {
     padding: 0.5rem 1rem;
   }
 }
+.footer-vector {
+  background: #212E66;
+  line-height: 0;
+}
+.footer-vector img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.3;
+}
+
 footer {
   display: flex;
   flex-direction: column;
   background: #212E66;
   color: #ffffff;
-  padding: 120px 40px 30px 40px;
+  padding: 100px 40px 30px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
   /* --- Top Footer (Menus) --- */
   /* --- Bottom Footer (Social) --- */
   /* --- Responsive Layout --- */
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 19px;
+  background: url(../images/Vector11.png) no-repeat bottom center;
+  background-size: 100% auto;
+  pointer-events: none;
+  z-index: 1;
 }
 footer .footer-text {
   font-size: 2.5rem;
@@ -397,91 +420,112 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
 .node--type-landing-page header {
   display: none;
 }
-
-.hero-banner-block .field--name-field-media-image {
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
-.hero-banner-block .field--name-field-media-image .field__item {
-  background: rgba(0, 0, 0, 0.8784313725);
-}
-.hero-banner-block .field--name-field-media-image .field__item img {
-  opacity: 0.5;
-}
-.hero-banner-block .field--name-body .field__item {
-  position: relative;
-  top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  gap: 1rem;
-}
-.hero-banner-block .field--name-body h2 {
-  text-align: center;
-  font-family: "Brightwall", serif;
-  font-size: 20px;
-  color: #ACDEEC;
-  margin: 0;
-}
-.hero-banner-block .field--name-body h4 {
-  font-family: "Geist", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-}
-.hero-banner-block .field--name-body p {
-  font-family: "Geist", sans-serif;
-  text-align: center;
-  color: #ffffff;
-  margin: 0;
-}
-.hero-banner-block .field--name-field-cta-button-link {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -21px;
-}
-.hero-banner-block .field--name-field-cta-button-link a {
+.node--type-landing-page.grid-full {
   display: block;
-  color: white;
+}
+.node--type-landing-page .node__content {
+  display: block;
+}
+.node--type-landing-page .layout--onecol {
+  max-width: 100%;
+}
+.node--type-landing-page .layout__region--content {
+  display: block;
+}
+
+.page-node-type-landing-page .region--content.layout--pass--content-medium {
+  display: block;
+}
+
+.path-session-tracks .region--content.layout--pass--content-medium {
+  display: block;
+}
+.path-session-tracks .view-track-detail {
+  max-width: 838px;
+  margin: 0 auto;
+  padding: 120px 1rem;
+}
+.path-session-tracks .view-track-detail .view-header h2 {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.84px;
+  color: #2F3941;
+  margin: 0 0 24px;
 }
 @media (min-width: 768px) {
-  .hero-banner-block .field--name-body .field__item {
-    position: relative;
-    left: 7rem;
-    top: 10rem;
+  .path-session-tracks .view-track-detail .view-header h2 {
+    font-size: 42px;
   }
-  .hero-banner-block .field--name-body h2 {
-    font-size: 70px;
-    color: #ACDEEC;
+}
+.path-session-tracks .view-track-detail .item-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.path-session-tracks .view-track-detail .item-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.path-session-tracks .views-field-name .field-content a {
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #293A80;
+  text-decoration: none;
+}
+.path-session-tracks .views-field-name .field-content a:hover {
+  color: #212E66;
+}
+.path-session-tracks .views-field-description__value .field-content,
+.path-session-tracks .views-field-field-target-audience .field-content,
+.path-session-tracks .views-field-field-track-goals .field-content {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #68737D;
+}
+.path-session-tracks .views-field-description__value .field-content p,
+.path-session-tracks .views-field-field-target-audience .field-content p,
+.path-session-tracks .views-field-field-track-goals .field-content p {
+  margin: 0;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content {
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content a {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  background: #D2EBF7;
+  color: #293A80;
+  padding: 0.3rem 0.85rem;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.path-session-tracks .views-field-field-track-keyword .field-content a:hover {
+  background: #293A80;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .path-session-tracks .view-track-detail {
+    padding: 60px 1rem;
   }
-  .hero-banner-block .field--name-body h4 {
-    font-size: 28px;
+  .path-session-tracks .view-track-detail .item-list ul {
+    gap: 40px;
   }
-  .hero-banner-block .field--name-field-cta-button-link {
-    top: 11rem;
-    left: 7rem;
-  }
-  .hero-banner-block .field--name-field-cta-button-link .field__item a {
-    display: block;
-    color: white;
-    padding-top: 12px;
-    padding-right: 20px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    border-radius: 99px;
-    border-width: 1px;
-    background: #293A80;
-    text-decoration: none;
-  }
-  .hero-banner-block .field--name-field-cta-button-link .field__item a:hover {
-    text-decoration: underline;
+  .path-session-tracks .view-track-detail .view-header h2 {
+    margin-bottom: 16px;
   }
 }
 

@@ -1,0 +1,28 @@
+uuid: 94d047d3-89e9-4f61-ba55-e837bc5de180
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_block_with_cta
+    - field.storage.block_content.field_map
+    - filter.format.content_format
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.text_block_with_cta.field_map
+field_name: field_map
+entity_type: block_content
+bundle: text_block_with_cta
+label: Map
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - content_format
+    - full_html
+field_type: text_with_summary

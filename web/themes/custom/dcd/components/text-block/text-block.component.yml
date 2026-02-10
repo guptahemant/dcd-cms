@@ -1,0 +1,14 @@
+name: Text Block
+status: experimental
+description: A simple text section with a title and body content.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The section heading.
+slots:
+  body:
+    title: Body Content
+    description: The body text render array.

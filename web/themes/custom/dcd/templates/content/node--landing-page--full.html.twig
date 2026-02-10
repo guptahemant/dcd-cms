@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for landing page nodes in full view mode.
+ * Removes layout--content-narrow constraint to allow full-width components.
+ */
+#}
+
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  'grid-full',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('comment') }}
+  </div>
+</article>

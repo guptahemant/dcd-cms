@@ -1,0 +1,20 @@
+name: Hero Banner
+status: experimental
+description: Full-width hero banner with background image, body content, and CTA.
+props:
+  type: object
+  properties:
+    vector_path:
+      type: string
+      title: Vector Line Path
+      description: Path to the decorative vector line image.
+slots:
+  image:
+    title: Background Image
+    description: The hero background image render array.
+  body:
+    title: Body Content
+    description: The hero body content (headings, text).
+  cta:
+    title: Call to Action
+    description: The CTA button/link render array.

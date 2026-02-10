@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.text_block_with_cta.field_cta_button_link
     - field.field.block_content.text_block_with_cta.field_cta_button_text
     - field.field.block_content.text_block_with_cta.field_image
+    - field.field.block_content.text_block_with_cta.field_map
     - field.field.block_content.text_block_with_cta.field_title
   module:
     - link
@@ -50,6 +51,16 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_map:
+    type: text_textarea_with_summary
+    weight: 28
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   field_title:
     type: string_textfield

@@ -40,8 +40,33 @@
   }
 }
 
+// Landing pages: break out of Olivero's grid to allow full-width components
 .node--type-landing-page {
   header {
     display: none;
+  }
+
+  // Reset Olivero grid so landing page content is full-width
+  &.grid-full {
+    display: block;
+  }
+
+  .node__content {
+    display: block;
+  }
+
+  .layout--onecol {
+    max-width: 100%;
+  }
+
+  .layout__region--content {
+    display: block;
+  }
+}
+
+// The region wrapper also constrains via grid - override for landing pages
+.page-node-type-landing-page {
+  .region--content.layout--pass--content-medium {
+    display: block;
   }
 }
