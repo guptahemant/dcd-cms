@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.papers.field_additional_info
     - field.field.node.papers.field_audience_type
     - field.field.node.papers.field_captivating_introduction
+    - field.field.node.papers.field_comment
     - field.field.node.papers.field_country
     - field.field.node.papers.field_date
     - field.field.node.papers.field_description
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.papers.field_learning_objectives
     - field.field.node.papers.field_outline
     - field.field.node.papers.field_prerequisite
+    - field.field.node.papers.field_rating
     - field.field.node.papers.field_session_type
     - field.field.node.papers.field_slot
     - field.field.node.papers.field_track
@@ -27,6 +29,11 @@ targetEntityType: node
 bundle: papers
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_description:
     type: basic_string
     label: hidden
@@ -39,10 +46,16 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  rate_paper_rating:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_additional_info: true
   field_audience_type: true
   field_captivating_introduction: true
+  field_comment: true
   field_country: true
   field_date: true
   field_event: true
@@ -50,6 +63,7 @@ hidden:
   field_learning_objectives: true
   field_outline: true
   field_prerequisite: true
+  field_rating: true
   field_session_type: true
   field_slot: true
   field_track: true

@@ -1,9 +1,16 @@
 uuid: 7426aef8-0821-4d89-9ce1-cab96b5a6901
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - workflows.workflow.basic_editorial
+  module:
+    - content_moderation
 id: speakers
 label: Speakers
 weight: 8
 is_admin: false
-permissions: {  }
+permissions:
+  - 'use basic_editorial transition create_new_draft'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition unpublish'

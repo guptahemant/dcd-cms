@@ -38,6 +38,16 @@
     text-transform: uppercase;
     color: $text-light;
   }
+
+  .page-title__subtitle {
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 12px;
+    text-align: center;
+  }
 }
 
 // Landing pages: break out of Olivero's grid to allow full-width components
