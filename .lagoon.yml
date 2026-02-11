@@ -52,6 +52,14 @@ tasks:
 
 environments:
   main:
+    routes:
+      - nginx:
+        - drupalcampdelhi.com:
+            tls-acme: 'false'
+            insecure: Allow
+        - www.drupalcampdelhi.com:
+            tls-acme: 'false'
+            insecure: Allow
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
