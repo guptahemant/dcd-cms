@@ -22,9 +22,33 @@
 
 {{ title_prefix }}
 {% if (title|render|striptags|trim is not empty) %}
-  <h1{{ title_attributes.addClass(classes) }}>{{ title }}</h1>
-  {% if subtitle is defined and subtitle %}
-    <p class="page-title__subtitle">{{ subtitle }}</p>
+  {% if is_user_profile and user_profile %}
+    {% set first_name = user_profile.field_first_name.value %}
+    {% set last_name = user_profile.field_last_name.value %}
+    {% set full_name = (first_name ~ ' ' ~ last_name)|trim %}
+    {# {% set designation = user_profile.field_organisation.value %} #}
+    {% set profile_photo = user_profile.field_profile_photo.entity %}
+
+    <div class="user-profile__header">
+      {% if profile_photo %}
+        <div class="user-profile__photo">
+          <img src="{{ file_url(profile_photo.uri.value) }}" alt="{{ full_name }}" class="user-profile__photo-image">
+          <img src="/themes/custom/dcd/assets/images/avatar.png" alt="" class="user-profile__photo-overlay">
+        </div>
+      {% endif %}
+
+      <div class="user-profile__info">
+        <h1{{ title_attributes.addClass(classes) }}>{{ full_name ?: user.displayName }}</h1>
+        {# {% if designation %}
+          <div class="user-profile__designation">{{ designation }}</div>
+        {% endif %} #}
+      </div>
+    </div>
+  {% else %}
+    <h1{{ title_attributes.addClass(classes) }}>{{ title }}</h1>
+    {% if subtitle is defined and subtitle %}
+      <p class="page-title__subtitle">{{ subtitle }}</p>
+    {% endif %}
   {% endif %}
 {% endif %}
 {{ title_suffix }}

@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * DCD theme override to present all user data.
+ */
+#}
+<article{{ attributes.addClass('user-profile') }}>
+  
+  {# Tab navigation #}
+  <div class="user-profile-tabs">
+    <a href="{{ path('entity.user.canonical', {'user': user.id}) }}" class="tab-button active">My Profile</a>
+    <a href="{{ path('view.user_paper_listing.page_1', {'user': user.id}) }}" class="tab-button">Sessions Detail</a>
+  </div>
+
+  {# Profile content #}
+  <div class="user-profile-content">
+    
+    <div class="profile-section">
+      <div class="section-header">
+        <h2>My profile</h2>
+        <a href="{{ path('entity.user.edit_form', {'user': user.id}) }}" class="edit-button">
+          Edit
+        </a>
+      </div>
+
+      <div class="profile-fields">
+        {# Render email from user entity #}
+        {% if user.mail.0.value %}
+          <div class="field-item">
+            <div class="field-label">Email</div>
+            <div class="field-value">{{ user.mail.0.value }}</div>
+          </div>
+        {% endif %}
+        
+        {# Render all profile fields #}
+        {{ content.profile_profiles }}
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+</article>

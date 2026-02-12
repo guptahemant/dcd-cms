@@ -1,0 +1,243 @@
+// User Profile Page Styles
+
+// Hide tabs on user profile pages - aggressive targeting
+body.hide-tabs,
+body.path-user {
+  .tabs,
+  .tabs-wrapper,
+  .tabs--primary,
+  .tabs--secondary,
+  nav.tabs,
+  nav.tabs-wrapper,
+  nav[role="navigation"].tabs,
+  nav[role="navigation"].tabs-wrapper,
+  nav[data-drupal-nav-primary-tabs],
+  .region-tabs,
+  [data-drupal-nav-primary-tabs] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+// User profile header in page title area
+.user-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+
+  .user-profile__photo {
+    flex-shrink: 0;
+    position: relative;
+    width: 120px;
+    height: 120px;
+
+    .user-profile__photo-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2945A8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .user-profile__photo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+
+  .user-profile__info {
+    flex-grow: 1;
+  }
+
+  .user-profile__name {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+    color: #212E66;
+  }
+
+  .user-profile__designation {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.4;
+  }
+}
+
+// User profile content area
+.user-profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+
+  .tab-button {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &.active {
+      color: #2945A8;
+      background: #F3F4F6;
+      border-radius: 8px 8px 0 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #2945A8;
+      }
+    }
+
+    &:hover:not(.active) {
+      color: #2945A8;
+    }
+  }
+}
+
+.user-profile-content {
+  .profile-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #212E66;
+        margin: 0;
+      }
+
+      .edit-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        color: #6b7280;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: #f9fafb;
+          border-color: #2945A8;
+          color: #2945A8;
+        }
+
+        &::after {
+          content: '✎';
+          font-size: 16px;
+        }
+      }
+    }
+
+    .profile-fields {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+
+      .field-item {
+        .field-label {
+          font-size: 14px;
+          color: #6b7280;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+        }
+
+        .field-value {
+          font-size: 16px;
+          color: #111827;
+          font-weight: 400;
+          word-break: break-word;
+
+          a {
+            color: #2945A8;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 767px) {
+  .user-profile__header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .user-profile__name {
+      font-size: 28px;
+    }
+
+    .user-profile__designation {
+      font-size: 16px;
+    }
+  }
+
+  .user-profile-tabs {
+    .tab-button {
+      padding: 0.75rem 1rem;
+      font-size: 14px;
+    }
+  }
+
+  .user-profile-content {
+    .profile-section {
+      padding: 1.5rem;
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      .profile-fields {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  }
+}

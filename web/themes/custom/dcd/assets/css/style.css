@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Brightwall";
@@ -811,6 +812,216 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   background: #212E66;
   border-color: #212E66;
   box-shadow: 0 2px 8px rgba(16, 24, 40, 0.1);
+}
+body.hide-tabs .tabs,
+body.hide-tabs .tabs-wrapper,
+body.hide-tabs .tabs--primary,
+body.hide-tabs .tabs--secondary,
+body.hide-tabs nav.tabs,
+body.hide-tabs nav.tabs-wrapper,
+body.hide-tabs nav[role=navigation].tabs,
+body.hide-tabs nav[role=navigation].tabs-wrapper,
+body.hide-tabs nav[data-drupal-nav-primary-tabs],
+body.hide-tabs .region-tabs,
+body.hide-tabs [data-drupal-nav-primary-tabs],
+body.path-user .tabs,
+body.path-user .tabs-wrapper,
+body.path-user .tabs--primary,
+body.path-user .tabs--secondary,
+body.path-user nav.tabs,
+body.path-user nav.tabs-wrapper,
+body.path-user nav[role=navigation].tabs,
+body.path-user nav[role=navigation].tabs-wrapper,
+body.path-user nav[data-drupal-nav-primary-tabs],
+body.path-user .region-tabs,
+body.path-user [data-drupal-nav-primary-tabs] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+.user-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.user-profile__header .user-profile__photo {
+  flex-shrink: 0;
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.user-profile__header .user-profile__photo .user-profile__photo-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2945A8;
+  position: relative;
+  z-index: 1;
+}
+.user-profile__header .user-profile__photo .user-profile__photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.user-profile__header .user-profile__info {
+  flex-grow: 1;
+}
+.user-profile__header .user-profile__name {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #212E66;
+}
+.user-profile__header .user-profile__designation {
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.user-profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+.user-profile-tabs .tab-button {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.user-profile-tabs .tab-button.active {
+  color: #2945A8;
+  background: #F3F4F6;
+  border-radius: 8px 8px 0 0;
+}
+.user-profile-tabs .tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #2945A8;
+}
+.user-profile-tabs .tab-button:hover:not(.active) {
+  color: #2945A8;
+}
+
+.user-profile-content .profile-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.user-profile-content .profile-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.user-profile-content .profile-section .section-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #212E66;
+  margin: 0;
+}
+.user-profile-content .profile-section .section-header .edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.user-profile-content .profile-section .section-header .edit-button:hover {
+  background: #f9fafb;
+  border-color: #2945A8;
+  color: #2945A8;
+}
+.user-profile-content .profile-section .section-header .edit-button::after {
+  content: "✎";
+  font-size: 16px;
+}
+.user-profile-content .profile-section .profile-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.user-profile-content .profile-section .profile-fields .field-item .field-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.user-profile-content .profile-section .profile-fields .field-item .field-value {
+  font-size: 16px;
+  color: #111827;
+  font-weight: 400;
+  word-break: break-word;
+}
+.user-profile-content .profile-section .profile-fields .field-item .field-value a {
+  color: #2945A8;
+  text-decoration: none;
+}
+.user-profile-content .profile-section .profile-fields .field-item .field-value a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .user-profile__header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .user-profile__header .user-profile__name {
+    font-size: 28px;
+  }
+  .user-profile__header .user-profile__designation {
+    font-size: 16px;
+  }
+  .user-profile-tabs .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+  }
+  .user-profile-content .profile-section {
+    padding: 1.5rem;
+  }
+  .user-profile-content .profile-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .user-profile-content .profile-section .section-header h2 {
+    font-size: 24px;
+  }
+  .user-profile-content .profile-section .profile-fields {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
