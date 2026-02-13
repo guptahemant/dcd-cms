@@ -13,6 +13,8 @@ dependencies:
     - field.field.node.papers.field_description
     - field.field.node.papers.field_event
     - field.field.node.papers.field_first_time_session
+    - field.field.node.papers.field_have_you_spoken_at_drupal
+    - field.field.node.papers.field_if_yes_please_mention_deta
     - field.field.node.papers.field_learning_objectives
     - field.field.node.papers.field_outline
     - field.field.node.papers.field_prerequisite
@@ -46,11 +48,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  rate_paper_rating:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
 hidden:
   field_additional_info: true
   field_audience_type: true
@@ -60,6 +57,8 @@ hidden:
   field_date: true
   field_event: true
   field_first_time_session: true
+  field_have_you_spoken_at_drupal: true
+  field_if_yes_please_mention_deta: true
   field_learning_objectives: true
   field_outline: true
   field_prerequisite: true
@@ -68,3 +67,4 @@ hidden:
   field_slot: true
   field_track: true
   field_track_category: true
+  rate_paper_rating: true

@@ -4,10 +4,6 @@ defaults:
   formatter: symfony_mailer_lite
 modules:
   symfony_mailer_lite:
-    none:
-      sender: symfony_mailer_lite
-      formatter: symfony_mailer_lite
+    none: {  }
   easy_email:
-    none:
-      sender: symfony_mailer_lite
-      formatter: symfony_mailer_lite
+    none: {  }

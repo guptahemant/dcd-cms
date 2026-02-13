@@ -1,4 +1,4 @@
-uuid: 6f3e539a-3790-453d-a11a-294ea067cad1
+uuid: cc574c2c-581f-48b2-bdeb-1ad08338369f
 langcode: en
 status: true
 dependencies:
@@ -18,147 +18,147 @@ settings:
   label_display: visible
   provider: social_media_links
   platforms:
-    mastodon:
-      value: ''
-      description: ''
-      weight: '-10'
-    twitter:
-      value: ''
-      description: ''
-      weight: '-9'
-    pinterest:
-      value: ''
-      description: ''
-      weight: '-8'
-    glassdoor:
-      value: ''
-      description: ''
-      weight: '-7'
-    yandex_zen:
-      value: ''
-      description: ''
-      weight: '-6'
-    drupal:
-      value: ''
-      description: ''
-      weight: '-5'
-    tiktok:
-      value: ''
-      description: ''
-      weight: '-4'
-    rss:
-      value: ''
-      description: ''
-      weight: '-3'
-    tumblr:
-      value: ''
-      description: ''
-      weight: '-2'
-    email:
-      value: ''
-      description: ''
-      weight: '-1'
-    soundcloud:
-      value: ''
-      description: ''
-      weight: '0'
-    telegram:
-      value: ''
-      description: ''
-      weight: '1'
-    bitbucket:
-      value: ''
-      description: ''
-      weight: '2'
-    youtube:
-      value: ''
-      description: ''
-      weight: '3'
-    contact:
-      value: ''
-      description: ''
-      weight: '4'
-    instagram:
-      value: ''
-      description: ''
-      weight: '5'
-    linkedin:
-      value: company/drupal-association-delhi/
-      description: ''
-      weight: '6'
-    github:
-      value: ''
-      description: ''
-      weight: '7'
-    whatsapp_channel:
-      value: ''
-      description: ''
-      weight: '8'
-    gitlab:
-      value: ''
-      description: ''
-      weight: '9'
-    goodreads:
-      value: ''
-      description: ''
-      weight: '10'
     amazon:
       value: ''
       description: ''
-      weight: '11'
-    vkontakte:
-      value: ''
-      description: ''
-      weight: '12'
-    whatsapp:
-      value: ''
-      description: ''
-      weight: '13'
-    youtube_channel:
-      value: ''
-      description: ''
-      weight: '14'
-    meetup:
-      value: ''
-      description: ''
-      weight: '15'
-    googleplay:
-      value: ''
-      description: ''
-      weight: '16'
-    googleplus:
-      value: ''
-      description: ''
-      weight: '17'
-    facebook:
-      value: ''
-      description: ''
-      weight: '18'
-    patreon:
-      value: ''
-      description: ''
-      weight: '19'
-    slideshare:
-      value: ''
-      description: ''
-      weight: '20'
-    website:
-      value: ''
-      description: ''
-      weight: '21'
+      weight: '-10'
     behance:
       value: ''
       description: ''
-      weight: '22'
-    xing:
+      weight: '-9'
+    bitbucket:
       value: ''
       description: ''
-      weight: '23'
+      weight: '-8'
+    contact:
+      value: ''
+      description: ''
+      weight: '-7'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-6'
+    email:
+      value: ''
+      description: ''
+      weight: '-5'
+    facebook:
+      value: DrupalCampDelhi
+      description: ''
+      weight: '-4'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-3'
+    github:
+      value: ''
+      description: ''
+      weight: '-2'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '-1'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '0'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '1'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '2'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '3'
+    instagram:
+      value: drupalcampdelhi
+      description: ''
+      weight: '4'
+    linkedin:
+      value: company/drupal-association-delhi/
+      description: ''
+      weight: '5'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '6'
+    meetup:
+      value: ''
+      description: ''
+      weight: '7'
+    patreon:
+      value: ''
+      description: ''
+      weight: '8'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '9'
+    rss:
+      value: ''
+      description: ''
+      weight: '10'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '11'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '12'
+    telegram:
+      value: ''
+      description: ''
+      weight: '13'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '14'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '15'
+    twitter:
+      value: ''
+      description: ''
+      weight: '16'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '17'
     vimeo:
       value: ''
       description: ''
+      weight: '18'
+    website:
+      value: ''
+      description: ''
+      weight: '19'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '20'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '21'
+    xing:
+      value: ''
+      description: ''
+      weight: '22'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '23'
+    youtube:
+      value: ''
+      description: ''
       weight: '24'
-    flickr:
+    youtube_channel:
       value: ''
       description: ''
       weight: '25'

@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - dashboard.dashboard.welcome
+    - filter.format.webform_default
     - node.type.papers
+    - workflows.workflow.basic_editorial
   module:
     - captcha
     - coffee
+    - content_moderation
     - dashboard
     - file
+    - filter
     - honeypot
     - klaro
     - media
@@ -30,7 +34,11 @@ permissions:
   - 'edit any papers content'
   - 'edit own papers content'
   - 'skip CAPTCHA'
+  - 'use basic_editorial transition create_new_draft'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition unpublish'
   - 'use klaro'
+  - 'use text format webform_default'
   - 'view media'
   - 'view own unpublished content'
   - 'view welcome dashboard'

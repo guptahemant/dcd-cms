@@ -9,6 +9,7 @@ module:
   automatic_updates: 0
   automatic_updates_extensions: 0
   autosave_form: 0
+  backup_migrate: 0
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
@@ -40,7 +41,6 @@ module:
   eca: 0
   eca_base: 0
   eca_config: 0
-  eca_content: 0
   eca_misc: 0
   eca_modeller_bpmn: 0
   eca_project_browser: 0
@@ -62,7 +62,6 @@ module:
   geocoder_geofield: 0
   geofield: 0
   gin_toolbar: 0
-  google_profile_handler: 0
   hal: 0
   honeypot: 0
   image: 0
@@ -107,9 +106,8 @@ module:
   serialization: 0
   smart_date: 0
   social_api: 0
-  social_auth: 0
-  social_auth_google: 0
   social_media_links: 0
+  social_media_links_field: 0
   starrating: 0
   svg_image: 0
   symfony_mailer_lite: 0
@@ -128,6 +126,8 @@ module:
   views_data_export: 0
   views_ui: 0
   votingapi: 0
+  webform: 0
+  webform_ui: 0
   workflows: 0
   eca_form: 1
   pathauto: 1

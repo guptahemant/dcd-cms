@@ -1,9 +1,10 @@
 uuid: 585777f6-ad10-4f34-b427-5869af7df5fc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.full
   module:
     - node
     - taxonomy
@@ -281,7 +282,7 @@ display:
         type: node_rss
         options:
           relationship: none
-          view_mode: default
+          view_mode: full
       query:
         type: views_query
         options: {  }

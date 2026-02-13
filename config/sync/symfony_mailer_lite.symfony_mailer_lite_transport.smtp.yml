@@ -1,0 +1,18 @@
+uuid: b1b8d446-e31d-4972-957f-e6c9c6f1e0ce
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: drupalcampdelhi@gmail.com
+  pass: achshdcwdfvbgddm
+  host: smtp.gmail.com
+  port: null
+  query:
+    verify_peer: true
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null
