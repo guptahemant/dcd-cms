@@ -1,0 +1,24 @@
+uuid: 092ad6cf-ecd3-4316-a684-aba499547401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_comment
+    - node.type.review
+  module:
+    - text
+_core:
+  default_config_hash: bQUeof2hzYMBBBivH5cbIyt2jdOdZ1TgQ3-wtoTrT0g
+id: node.review.field_review_comment
+field_name: field_review_comment
+entity_type: node
+bundle: review
+label: 'Review Comment'
+description: 'Your review comments about this paper.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

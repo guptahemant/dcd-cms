@@ -1,0 +1,24 @@
+uuid: c3d4eb27-8eeb-47a7-a98f-b09f741aa6a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_rating
+    - node.type.review
+  module:
+    - starrating
+_core:
+  default_config_hash: 9bGuB7RRRNwNGeiJrSYvRxQHSlblqm5e3Jh_ebnwxbI
+id: node.review.field_review_rating
+field_name: field_review_rating
+entity_type: node
+bundle: review
+label: 'Star Rating'
+description: 'Rate the paper from 1 to 5 stars.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  max_value: 5
+field_type: starrating

@@ -1,0 +1,13 @@
+uuid: a145f2d7-db50-49b6-b3b9-faf5683a40ff
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kKakaKudkyGKTocOeb6V1OnEVPSGnanoXcTFfoCJfTA
+name: Review
+type: review
+description: 'A review of a paper submission, containing a star rating and comment.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

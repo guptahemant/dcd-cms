@@ -8,6 +8,7 @@ dependencies:
     - comment
     - content_moderation
     - field_permissions
+    - node
 id: track_team_lead
 label: 'Track team lead'
 weight: 6
@@ -15,8 +16,12 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'create field_rating'
+  - 'create review content'
+  - 'delete any review content'
+  - 'edit any review content'
   - 'edit own comments'
   - 'edit own field_rating'
+  - 'edit own review content'
   - 'post comments'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition rejected'

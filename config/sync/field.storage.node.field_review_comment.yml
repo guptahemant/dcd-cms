@@ -1,0 +1,21 @@
+uuid: eb182ac9-606f-4f69-824f-0a60f582bae6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: sq8kKWO7WlckjaGMSj3t1uFOP7tBtRq_vZYzfcStXHY
+id: node.field_review_comment
+field_name: field_review_comment
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

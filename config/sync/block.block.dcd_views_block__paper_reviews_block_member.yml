@@ -1,0 +1,33 @@
+uuid: 9fc8069a-187c-46b8-ab2b-00d9d770deed
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.paper_reviews
+  module:
+    - node
+    - views
+  theme:
+    - dcd
+id: dcd_views_block__paper_reviews_block_member
+theme: dcd
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:paper_reviews-block_member'
+settings:
+  id: 'views_block:paper_reviews-block_member'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      papers: papers

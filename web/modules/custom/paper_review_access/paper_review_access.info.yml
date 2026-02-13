@@ -1,0 +1,10 @@
+name: 'Paper Review Access'
+type: module
+description: 'Provides Review content type for rating papers, enforces per-user review visibility, one-review-per-paper constraint, and role-based access for Track team Members and Leads.'
+core_version_requirement: ^10.3 || ^11
+package: DCD
+dependencies:
+  - drupal:node
+  - drupal:user
+  - drupal:views
+  - starrating:starrating

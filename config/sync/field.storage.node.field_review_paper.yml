@@ -1,0 +1,21 @@
+uuid: 9e3a15e1-4db5-4874-815d-1522c7857063
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: fUNGzWKRKLnZqUwqQ-9yAv_RzoDFF3vQ0AYOgdGDV2c
+id: node.field_review_paper
+field_name: field_review_paper
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
