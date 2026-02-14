@@ -6,6 +6,7 @@ dependencies:
     - node.type.papers
     - user.role.authenticated
   module:
+    - content_moderation
     - node
     - user
 id: user_paper_listing
@@ -155,16 +156,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        status:
-          id: status
+        moderation_state:
+          id: moderation_state
           table: node_field_data
-          field: status
+          field: moderation_state
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: status
-          plugin_id: field
+          plugin_id: moderation_state_field
           label: State
           exclude: false
           alter:
@@ -207,11 +207,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: boolean
-          settings:
-            format: custom
-            format_custom_false: Draft
-            format_custom_true: Submitted
+          type: content_moderation_state
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true

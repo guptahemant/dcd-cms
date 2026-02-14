@@ -2,8 +2,11 @@ uuid: d6c80c6b-73cd-4428-bcfe-68c84336ce16
 langcode: en
 status: true
 dependencies:
+  config:
+    - workflows.workflow.basic_editorial
   module:
     - comment
+    - content_moderation
     - field_permissions
 id: track_team_lead
 label: 'Track team lead'
@@ -15,5 +18,8 @@ permissions:
   - 'edit own comments'
   - 'edit own field_rating'
   - 'post comments'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition rejected'
+  - 'use basic_editorial transition selected'
   - 'view field_rating'
   - 'view own field_rating'

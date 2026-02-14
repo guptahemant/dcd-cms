@@ -15,37 +15,37 @@ type_settings:
   states:
     backup:
       label: Backup
-      weight: 4
+      weight: 1
       published: false
       default_revision: false
     draft:
       label: Draft
-      weight: -1
+      weight: -4
       published: false
       default_revision: false
     in_review:
       label: 'In review'
-      weight: 5
+      weight: -3
       published: false
       default_revision: true
     published:
-      label: Submitted
-      weight: 0
+      label: Published
+      weight: 2
       published: true
       default_revision: true
     rejected:
       label: Rejected
-      weight: 3
+      weight: 0
       published: false
       default_revision: false
     seleted:
-      label: Seleted
-      weight: 2
-      published: true
+      label: Selected
+      weight: -1
+      published: false
       default_revision: false
     unpublished:
       label: 'Withdraw submission'
-      weight: 1
+      weight: -2
       published: false
       default_revision: false
   transitions:
@@ -65,13 +65,17 @@ type_settings:
       label: 'In review'
       from:
         - backup
+        - draft
+        - in_review
         - published
+        - unpublished
       to: in_review
       weight: 3
     publish:
       label: Publish
       from:
-        - draft
+        - published
+        - seleted
       to: published
       weight: 0
     rejected:
@@ -89,7 +93,7 @@ type_settings:
     unpublish:
       label: 'Withdraw submission'
       from:
-        - published
+        - in_review
       to: unpublished
       weight: 1
   entity_types:
