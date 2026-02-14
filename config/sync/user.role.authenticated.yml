@@ -6,6 +6,7 @@ dependencies:
     - dashboard.dashboard.welcome
     - filter.format.webform_default
     - node.type.papers
+    - node.type.person
     - workflows.workflow.basic_editorial
   module:
     - captcha
@@ -18,6 +19,7 @@ dependencies:
     - klaro
     - media
     - node
+    - profile
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -33,12 +35,17 @@ permissions:
   - 'delete own files'
   - 'edit any papers content'
   - 'edit own papers content'
+  - 'edit own person content'
   - 'skip CAPTCHA'
+  - 'update own profile profile'
   - 'use basic_editorial transition create_new_draft'
-  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition in_review'
   - 'use basic_editorial transition unpublish'
   - 'use klaro'
   - 'use text format webform_default'
   - 'view media'
+  - 'view own profile'
+  - 'view own profile profile'
   - 'view own unpublished content'
+  - 'view own unpublished profile'
   - 'view welcome dashboard'

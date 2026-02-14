@@ -1,9 +1,14 @@
 uuid: fb76c783-96c3-48e9-9243-f5d00de07831
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - workflows.workflow.basic_editorial
+  module:
+    - content_moderation
 id: volunteers
 label: Volunteers
 weight: 5
 is_admin: false
-permissions: {  }
+permissions:
+  - 'use basic_editorial transition publish'

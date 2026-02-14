@@ -1,9 +1,16 @@
 uuid: 9b810fd8-65cb-44f8-8ae3-4c098392c041
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - workflows.workflow.basic_editorial
+  module:
+    - content_moderation
 id: site_admins
 label: 'Site admins'
 weight: 4
 is_admin: false
-permissions: {  }
+permissions:
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition rejected'
+  - 'use basic_editorial transition selected'
