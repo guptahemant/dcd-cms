@@ -1,0 +1,21 @@
+uuid: e5070a91-c13d-4e97-b39d-ba2d040e37fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_have_you_spoken_at_drupal
+    - node.type.papers
+id: node.papers.field_have_you_spoken_at_drupal
+field_name: field_have_you_spoken_at_drupal
+entity_type: node
+bundle: papers
+label: 'Have you spoken at Drupal event before ?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

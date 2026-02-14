@@ -13,6 +13,8 @@ dependencies:
     - field.field.node.papers.field_description
     - field.field.node.papers.field_event
     - field.field.node.papers.field_first_time_session
+    - field.field.node.papers.field_have_you_spoken_at_drupal
+    - field.field.node.papers.field_if_yes_please_mention_deta
     - field.field.node.papers.field_learning_objectives
     - field.field.node.papers.field_outline
     - field.field.node.papers.field_prerequisite
@@ -103,6 +105,24 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_have_you_spoken_at_drupal:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_if_yes_please_mention_deta:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
     region: content
   field_learning_objectives:
     type: text_default

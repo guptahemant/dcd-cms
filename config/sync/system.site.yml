@@ -2,13 +2,13 @@ _core:
   default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
 uuid: f2f970de-1c74-4fde-a0cc-cb314087086e
-name: Drupal
-mail: admin@admin.com
+name: 'Drupal Camp Delhi'
+mail: drupalcampdelhi@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1
+  front: /node/5
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

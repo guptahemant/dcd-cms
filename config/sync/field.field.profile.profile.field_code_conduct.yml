@@ -10,7 +10,7 @@ field_name: field_code_conduct
 entity_type: profile
 bundle: profile
 label: 'Code of conduct'
-description: ''
+description: '<a href="/code-conduct">Read code of conduct</a>'
 required: false
 translatable: false
 default_value: {  }

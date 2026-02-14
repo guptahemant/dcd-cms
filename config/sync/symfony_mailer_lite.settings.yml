@@ -1,1 +1,1 @@
-default_transport: native
+default_transport: smtp

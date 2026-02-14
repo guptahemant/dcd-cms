@@ -1,5 +1,0 @@
-client_id: '-'
-client_secret: '-'
-scopes: 'https://www.googleapis.com/auth/user.phonenumbers.read'
-endpoints: ''
-restricted_domain: ''
