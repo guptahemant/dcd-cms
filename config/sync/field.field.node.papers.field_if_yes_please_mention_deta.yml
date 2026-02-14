@@ -1,0 +1,19 @@
+uuid: f2a0742e-67db-4962-905e-6a010160b1f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_if_yes_please_mention_deta
+    - node.type.papers
+id: node.papers.field_if_yes_please_mention_deta
+field_name: field_if_yes_please_mention_deta
+entity_type: node
+bundle: papers
+label: 'If yes, please mention detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

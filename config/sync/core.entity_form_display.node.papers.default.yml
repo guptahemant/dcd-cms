@@ -12,6 +12,8 @@ dependencies:
     - field.field.node.papers.field_description
     - field.field.node.papers.field_event
     - field.field.node.papers.field_first_time_session
+    - field.field.node.papers.field_have_you_spoken_at_drupal
+    - field.field.node.papers.field_if_yes_please_mention_deta
     - field.field.node.papers.field_learning_objectives
     - field.field.node.papers.field_outline
     - field.field.node.papers.field_prerequisite
@@ -21,6 +23,7 @@ dependencies:
     - field.field.node.papers.field_track
     - field.field.node.papers.field_track_category
     - node.type.papers
+    - workflows.workflow.basic_editorial
   module:
     - address
     - comment
@@ -57,7 +60,7 @@ content:
     third_party_settings: {  }
   field_comment:
     type: comment_default
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,6 +84,21 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_have_you_spoken_at_drupal:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_if_yes_please_mention_deta:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_learning_objectives:
     type: text_textarea
@@ -108,7 +126,7 @@ content:
     third_party_settings: {  }
   field_rating:
     type: starrating
-    weight: 26
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -143,6 +161,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_state:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 3
@@ -166,7 +190,6 @@ hidden:
   path: true
   promote: true
   publish_on: true
-  publish_state: true
   sticky: true
   uid: true
   unpublish_on: true

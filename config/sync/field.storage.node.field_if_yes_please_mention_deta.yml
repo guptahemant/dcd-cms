@@ -1,0 +1,21 @@
+uuid: 89e9d917-6243-4989-b507-dd6b9e562ccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_if_yes_please_mention_deta
+field_name: field_if_yes_please_mention_deta
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

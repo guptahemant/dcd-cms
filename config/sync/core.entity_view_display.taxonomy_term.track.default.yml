@@ -8,7 +8,80 @@ dependencies:
     - field.field.taxonomy_term.track.field_track_keyword
     - taxonomy.vocabulary.track
   module:
+    - layout_builder
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          573111d3-57b5-43a6-b00a-4ec02cb9a210:
+            uuid: 573111d3-57b5-43a6-b00a-4ec02cb9a210
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:track:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          52ce31bb-0763-4a83-a023-cc290ae6f1ad:
+            uuid: 52ce31bb-0763-4a83-a023-cc290ae6f1ad
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:track:field_target_audience'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          993182a5-4b5a-40f2-b7c5-d7f620544d61:
+            uuid: 993182a5-4b5a-40f2-b7c5-d7f620544d61
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:track:field_track_goals'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          8285f808-7c3b-4fa9-9e4f-8fb71338a9f9:
+            uuid: 8285f808-7c3b-4fa9-9e4f-8fb71338a9f9
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:track:field_track_keyword'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: taxonomy_term.track.default
 targetEntityType: taxonomy_term
 bundle: track
@@ -39,7 +112,7 @@ content:
     type: entity_reference_label
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 4
     region: content
