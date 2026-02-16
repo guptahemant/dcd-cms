@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Theme override for user paper listing (my sessions) view.
+ */
+#}
+{% set uid = view.args.0 %}
+
+<div class="user-profile user-profile--paper-listing">
+  
+  {# Tab navigation #}
+  <div class="user-profile-tabs">
+    <a href="{{ path('entity.user.canonical', {'user': uid}) }}" class="tab-button">My Profile</a>
+    <a href="{{ path('view.user_paper_listing.page_1', {'user': uid}) }}" class="tab-button active">Sessions Detail</a>
+  </div>
+
+  {# View content #}
+  <div class="user-profile-content">
+    <div class="view-content">
+        {{ title_prefix }}
+        {{ title_suffix }}
+    
+    {% if header %}
+      <header>
+        {{ header }}
+      </header>
+    {% endif %}
+    
+    {% if exposed %}
+      <div class="view-filters">
+        {{ exposed }}
+      </div>
+    {% endif %}
+    
+    {% if attachment_before %}
+      <div class="attachment attachment-before">
+        {{ attachment_before }}
+      </div>
+    {% endif %}
+    
+    {% if rows %}
+      {{ rows }}
+    {% elseif empty %}
+      {{ empty }}
+    {% endif %}
+    
+    {% if pager %}
+      {{ pager }}
+    {% endif %}
+    
+    {% if attachment_after %}
+      <div class="attachment attachment-after">
+        {{ attachment_after }}
+      </div>
+    {% endif %}
+    
+    {% if more %}
+      {{ more }}
+    {% endif %}
+    
+    {% if footer %}
+      <footer>
+        {{ footer }}
+      </footer>
+    {% endif %}
+    
+    {% if feed_icons %}
+      <div class="feed-icons">
+        {{ feed_icons }}
+      </div>
+    {% endif %}
+    
+    </div>
+  </div>
+</div>

@@ -1,0 +1,517 @@
+@use '../abstracts/variables' as *;
+// User Profile Page Styles
+
+// Hide user-profile tabs only on user profile and paper listing pages
+body:has(.user-profile--page) #block-dcd-tabs,
+body:has(.user-profile--paper-listing) #block-dcd-tabs {
+  display: none !important;
+}
+
+body:has(.user-profile--page) .block-page-title-block ,
+body:has(.user-profile--paper-listing) .block-page-title-block {
+  overflow: initial;
+  margin-bottom: 10rem;
+  .page-title {
+    font-family: $font-primary;
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-black;
+    margin: 0px;
+    width: 350px;
+    text-transform: initial;
+  }
+}
+
+// User profile header in page title area
+.user-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  flex-flow: column;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  z-index: 100;
+
+
+  .user-profile__photo {
+    flex-shrink: 0;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .user-profile__photo-image {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .user-profile__photo-overlay {
+      position: absolute;
+      width: 199px;
+      height: 199px;
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+
+  .user-profile__info {
+    flex-grow: 1;
+  }
+
+  .user-profile__name {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+    color: $cyan-500;
+  }
+
+  .user-profile__designation {
+    font-size: 18px;
+    color: $gray-500;
+    line-height: 1.4;
+  }
+}
+
+// User profile content area
+.user-profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+
+  .tab-button {
+    padding: 10px 20px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $gray-500;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid #E9EBED;
+    text-decoration: none;
+    width: 200px;
+
+    &.active {
+      color: $cyan-400;
+      background: linear-gradient(90deg, #E0E4F5 0%, #FFF0F8 100%);
+      border: initial;
+    }
+
+    &:hover:not(.active) {
+      color: $cyan-400;
+    }
+  }
+}
+
+.user-profile-content {
+  .profile-section {
+    padding: 10px;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: auto;
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 120%;
+        color: $text-dark;
+      }
+
+      .edit-button {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 81px;
+        height: 36px;
+        border-radius: 32px;
+        background: $bg-white;
+        border: 1px solid #E9EBED;
+        box-shadow: 0px 1px 4px rgba(16, 24, 40, 0.05);
+        color: $gray-500;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+
+        &:hover {
+          background: $gray-50;
+          border-color: $cyan-400;
+          color: $cyan-400;
+
+          &::after {
+            filter: brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(1352%) hue-rotate(213deg) brightness(91%) contrast(87%);
+          }
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background-image: url('/themes/custom/dcd/assets/images/edit_icon.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .profile-fields {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+
+        .field-label, .field__label {
+          font-family: $font-primary;
+          color: #616161;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 120%;
+          margin-bottom: 8px;
+        }
+
+        .field-value, .field__item {
+          font-family: $font-primary;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 120%;
+          color: $text-black;
+
+          a {
+            color: $cyan-400;
+            text-decoration: none;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 767px) {
+  .user-profile__header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .user-profile__name {
+      font-size: 28px;
+    }
+
+    .user-profile__designation {
+      font-size: 16px;
+    }
+  }
+
+  .user-profile-tabs {
+    .tab-button {
+      padding: 0.75rem 1rem;
+      font-size: 14px;
+    }
+  }
+
+  .user-profile-content {
+    .profile-section {
+      padding: 1.5rem;
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      .profile-fields {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+// =====================
+// Drupal Modal Dialog Styling (jQuery UI Dialog)
+// =====================
+.ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+  opacity: 1 !important;
+  z-index: 10000 !important;
+}
+
+.ui-dialog {
+  z-index: 10001 !important;
+  background: $bg-white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  max-height: 95vh;
+  overflow: hidden;
+
+  // Dialog title bar
+  .ui-dialog-titlebar {
+    background: $gray-50;
+    border: none;
+    border-bottom: 1px solid $gray-200;
+    padding: 1rem 1.5rem;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .ui-dialog-title {
+      font-family: $font-primary;
+      font-size: 18px;
+      font-weight: 600;
+      color: $cyan-500;
+      margin: 0;
+    }
+
+    // Close button
+    .ui-dialog-titlebar-close {
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background: $bg-white;
+      border: 1px solid $gray-200;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      margin: 0;
+      padding: 0;
+
+      &:hover {
+        background: $gray-100;
+        border-color: $gray-300;
+      }
+
+      &::before {
+        content: '✕';
+        font-size: 14px;
+        color: $gray-500;
+        font-weight: 600;
+      }
+
+      .ui-icon,
+      .ui-button-icon {
+        display: block;
+      }
+
+      .ui-button-icon-space {
+        display: none;
+      }
+    }
+  }
+
+  // Dialog content area
+  .ui-dialog-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 140px);
+    background: $bg-white;
+
+    // Form styling inside modal
+    .form-item {
+      margin-bottom: 1rem;
+    }
+
+    .form-item__label {
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-dark;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .form-element {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid $gray-300;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $cyan-400;
+        box-shadow: 0 0 0 3px rgba($cyan-400, 0.1);
+      }
+    }
+
+    // Checkbox styling - label on the right
+    .form-item--checkbox,
+    .form-type-checkbox,
+    .form-type-boolean,
+    .js-form-type-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+
+      input[type="checkbox"],
+      .form-checkbox,
+      .form-boolean--type-checkbox {
+        order: 1;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+
+      .form-item__label,
+      label {
+        order: 2;
+        margin-bottom: 0;
+        cursor: pointer;
+        flex: 0 0 auto;
+      }
+
+      .form-item__description,
+      .description {
+        order: 3;
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 0.25rem;
+        margin-left: 0;
+        padding-left: calc(20px + 0.75rem);
+      }
+    }
+
+    // Details/fieldset styling
+    .olivero-details,
+    details {
+      border: 1px solid $gray-200;
+      border-radius: 8px;
+      margin-top: 1rem;
+
+      summary,
+      .olivero-details__summary {
+        padding: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        background: $gray-50;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .olivero-details__wrapper {
+        padding: 1rem;
+      }
+    }
+  }
+
+  // Dialog button pane
+  .ui-dialog-buttonpane {
+    background: $gray-50;
+    border-top: 1px solid $gray-200;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border-radius: 0 0 12px 12px;
+
+    .ui-dialog-buttonset {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+
+      button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &.button--primary,
+        &:first-child {
+          background: $cyan-400;
+          border: 1px solid $cyan-400;
+          color: $text-light;
+
+          &:hover {
+            background: $cyan-500;
+            border-color: $cyan-500;
+          }
+        }
+
+        &.button--secondary,
+        &:not(:first-child) {
+          background: $bg-white;
+          border: 1px solid $gray-300;
+          color: $gray-700;
+
+          &:hover {
+            background: $gray-100;
+          }
+        }
+      }
+    }
+  }
+
+  // Form actions inside dialog content
+  .form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+
+    .button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .button--primary {
+      background: $cyan-400;
+      border: 1px solid $cyan-400;
+      color: $text-light;
+
+      &:hover {
+        background: $cyan-500;
+        border-color: $cyan-500;
+      }
+    }
+  }
+}

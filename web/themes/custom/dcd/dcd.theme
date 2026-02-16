@@ -11,8 +11,21 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_preprocess_HOOK() for page templates.
  */
 function dcd_preprocess_page(array &$variables) {
-  if (\Drupal::routeMatch()->getRouteName() === 'user.login') {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'user.login') {
     $variables['attributes']['class'][] = 'user-login-page';
+  }
+
+  // Add class to hide tabs from user profile and my-sessions pages.
+  $hide_tabs_routes = [
+    'entity.user.canonical',
+    'entity.user.edit_form',
+    'view.user_paper_listing.page_1',
+  ];
+
+  if (in_array($route_name, $hide_tabs_routes)) {
+    $variables['attributes']['class'][] = 'hide-tabs';
   }
 
   $variables['top_banner_text'] = theme_get_setting('top_banner_text');
@@ -24,6 +37,56 @@ function dcd_preprocess_page(array &$variables) {
  */
 function dcd_preprocess_page_title(array &$variables) {
   $route = \Drupal::routeMatch()->getRouteName();
+
+  // Handle user profile pages.
+  if ($route === 'entity.user.canonical') {
+    $user = \Drupal::routeMatch()->getParameter('user');
+    if ($user) {
+      // Load the user's profile.
+      $profile_storage = \Drupal::entityTypeManager()->getStorage('profile');
+      $profiles = $profile_storage->loadByProperties([
+        'uid' => $user->id(),
+        'type' => 'profile',
+        'status' => TRUE,
+      ]);
+
+      if (!empty($profiles)) {
+        $profile = reset($profiles);
+        $variables['user_profile'] = $profile;
+        $variables['user'] = $user;
+        $variables['is_user_profile'] = TRUE;
+      }
+    }
+    return;
+  }
+
+  // Handle my-sessions page.
+  if ($route === 'view.user_paper_listing.page_1') {
+    $uid = \Drupal::routeMatch()->getParameter('user');
+    if ($uid) {
+      // Load the user entity.
+      $user = \Drupal::entityTypeManager()->getStorage('user')->load($uid);
+
+      if ($user) {
+        // Load the user's profile.
+        $profile_storage = \Drupal::entityTypeManager()->getStorage('profile');
+        $profiles = $profile_storage->loadByProperties([
+          'uid' => $user->id(),
+          'type' => 'profile',
+          'status' => TRUE,
+        ]);
+
+        if (!empty($profiles)) {
+          $profile = reset($profiles);
+          $variables['user_profile'] = $profile;
+          $variables['user'] = $user;
+          $variables['is_user_profile'] = TRUE;
+        }
+      }
+    }
+    return;
+  }
+
   $titles = [
     'user.login' => [
       'title' => t('Login here for Drupal Camp Delhi 2026'),
@@ -89,4 +152,55 @@ function dcd_form_system_theme_settings_alter(array &$form, FormStateInterface $
     '#default_value' => theme_get_setting('footer_text'),
     '#description' => t('Enter the text to be shown in the footer.'),
   ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for user templates.
+ */
+function dcd_preprocess_user(array &$variables) {
+  $user = $variables['user'];
+
+  // Load the user's profile.
+  $profile_storage = \Drupal::entityTypeManager()->getStorage('profile');
+  $profiles = $profile_storage->loadByProperties([
+    'uid' => $user->id(),
+    'type' => 'profile',
+    'status' => TRUE,
+  ]);
+
+  if (!empty($profiles)) {
+    $profile = reset($profiles);
+    // Add profile to user object for easy access in template.
+    $user->profile_profiles = [$profile];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views.
+ */
+function dcd_preprocess_views_view__user_paper_listing__page_1(array &$variables) {
+  // Get the user argument from the view.
+  $view = $variables['view'];
+  if (!empty($view->args[0])) {
+    $uid = $view->args[0];
+    $user = \Drupal::entityTypeManager()->getStorage('user')->load($uid);
+
+    if ($user) {
+      $variables['user'] = $user;
+      $variables['current_user'] = $user;
+
+      // Load the user's profile.
+      $profile_storage = \Drupal::entityTypeManager()->getStorage('profile');
+      $profiles = $profile_storage->loadByProperties([
+        'uid' => $uid,
+        'type' => 'profile',
+        'status' => TRUE,
+      ]);
+
+      if (!empty($profiles)) {
+        $profile = reset($profiles);
+        $variables['user_profile'] = $profile;
+      }
+    }
+  }
 }

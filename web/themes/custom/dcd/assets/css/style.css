@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Brightwall";
@@ -811,6 +812,464 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   background: #212E66;
   border-color: #212E66;
   box-shadow: 0 2px 8px rgba(16, 24, 40, 0.1);
+}
+
+body:has(.user-profile--page) #block-dcd-tabs,
+body:has(.user-profile--paper-listing) #block-dcd-tabs {
+  display: none !important;
+}
+
+body:has(.user-profile--page) .block-page-title-block,
+body:has(.user-profile--paper-listing) .block-page-title-block {
+  overflow: initial;
+  margin-bottom: 10rem;
+}
+body:has(.user-profile--page) .block-page-title-block .page-title,
+body:has(.user-profile--paper-listing) .block-page-title-block .page-title {
+  font-family: "Geist", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0px;
+  width: 350px;
+  text-transform: initial;
+}
+
+.user-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  flex-flow: column;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  z-index: 100;
+}
+.user-profile__header .user-profile__photo {
+  flex-shrink: 0;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-profile__header .user-profile__photo .user-profile__photo-image {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.user-profile__header .user-profile__photo .user-profile__photo-overlay {
+  position: absolute;
+  width: 199px;
+  height: 199px;
+  z-index: 2;
+  pointer-events: none;
+}
+.user-profile__header .user-profile__info {
+  flex-grow: 1;
+}
+.user-profile__header .user-profile__name {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #212E66;
+}
+.user-profile__header .user-profile__designation {
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.user-profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.user-profile-tabs .tab-button {
+  padding: 10px 20px;
+  border-radius: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid #E9EBED;
+  text-decoration: none;
+  width: 200px;
+}
+.user-profile-tabs .tab-button.active {
+  color: #293A80;
+  background: linear-gradient(90deg, #E0E4F5 0%, #FFF0F8 100%);
+  border: initial;
+}
+.user-profile-tabs .tab-button:hover:not(.active) {
+  color: #293A80;
+}
+
+.user-profile-content .profile-section {
+  padding: 10px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+.user-profile-content .profile-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.user-profile-content .profile-section .section-header h2 {
+  font-family: "Geist", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 120%;
+  color: #2D2D2D;
+}
+.user-profile-content .profile-section .section-header .edit-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 81px;
+  height: 36px;
+  border-radius: 32px;
+  background: #ffffff;
+  border: 1px solid #E9EBED;
+  box-shadow: 0px 1px 4px rgba(16, 24, 40, 0.05);
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.user-profile-content .profile-section .section-header .edit-button:hover {
+  background: #f9fafb;
+  border-color: #293A80;
+  color: #293A80;
+}
+.user-profile-content .profile-section .section-header .edit-button:hover::after {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(1352%) hue-rotate(213deg) brightness(91%) contrast(87%);
+}
+.user-profile-content .profile-section .section-header .edit-button::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("/themes/custom/dcd/assets/images/edit_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.user-profile-content .profile-section .profile-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.user-profile-content .profile-section .profile-fields .field-label, .user-profile-content .profile-section .profile-fields .field__label {
+  font-family: "Geist", sans-serif;
+  color: #616161;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+.user-profile-content .profile-section .profile-fields .field-value, .user-profile-content .profile-section .profile-fields .field__item {
+  font-family: "Geist", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: #000000;
+}
+.user-profile-content .profile-section .profile-fields .field-value a, .user-profile-content .profile-section .profile-fields .field__item a {
+  color: #293A80;
+  text-decoration: none;
+  font-family: "Geist", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+.user-profile-content .profile-section .profile-fields .field-value a:hover, .user-profile-content .profile-section .profile-fields .field__item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .user-profile__header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .user-profile__header .user-profile__name {
+    font-size: 28px;
+  }
+  .user-profile__header .user-profile__designation {
+    font-size: 16px;
+  }
+  .user-profile-tabs .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+  }
+  .user-profile-content .profile-section {
+    padding: 1.5rem;
+  }
+  .user-profile-content .profile-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .user-profile-content .profile-section .section-header h2 {
+    font-size: 24px;
+  }
+  .user-profile-content .profile-section .profile-fields {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+  opacity: 1 !important;
+  z-index: 10000 !important;
+}
+
+.ui-dialog {
+  z-index: 10001 !important;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  max-height: 95vh;
+  overflow: hidden;
+}
+.ui-dialog .ui-dialog-titlebar {
+  background: #f9fafb;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212E66;
+  margin: 0;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin: 0;
+  padding: 0;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close::before {
+  content: "✕";
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 600;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-button-icon {
+  display: block;
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-button-icon-space {
+  display: none;
+}
+.ui-dialog .ui-dialog-content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(90vh - 140px);
+  background: #ffffff;
+}
+.ui-dialog .ui-dialog-content .form-item {
+  margin-bottom: 1rem;
+}
+.ui-dialog .ui-dialog-content .form-item__label {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.ui-dialog .ui-dialog-content .form-element {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+.ui-dialog .ui-dialog-content .form-element:focus {
+  outline: none;
+  border-color: #293A80;
+  box-shadow: 0 0 0 3px rgba(41, 58, 128, 0.1);
+}
+.ui-dialog .ui-dialog-content .form-item--checkbox,
+.ui-dialog .ui-dialog-content .form-type-checkbox,
+.ui-dialog .ui-dialog-content .form-type-boolean,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.ui-dialog .ui-dialog-content .form-item--checkbox input[type=checkbox],
+.ui-dialog .ui-dialog-content .form-item--checkbox .form-checkbox,
+.ui-dialog .ui-dialog-content .form-item--checkbox .form-boolean--type-checkbox,
+.ui-dialog .ui-dialog-content .form-type-checkbox input[type=checkbox],
+.ui-dialog .ui-dialog-content .form-type-checkbox .form-checkbox,
+.ui-dialog .ui-dialog-content .form-type-checkbox .form-boolean--type-checkbox,
+.ui-dialog .ui-dialog-content .form-type-boolean input[type=checkbox],
+.ui-dialog .ui-dialog-content .form-type-boolean .form-checkbox,
+.ui-dialog .ui-dialog-content .form-type-boolean .form-boolean--type-checkbox,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox input[type=checkbox],
+.ui-dialog .ui-dialog-content .js-form-type-checkbox .form-checkbox,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox .form-boolean--type-checkbox {
+  order: 1;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.ui-dialog .ui-dialog-content .form-item--checkbox .form-item__label,
+.ui-dialog .ui-dialog-content .form-item--checkbox label,
+.ui-dialog .ui-dialog-content .form-type-checkbox .form-item__label,
+.ui-dialog .ui-dialog-content .form-type-checkbox label,
+.ui-dialog .ui-dialog-content .form-type-boolean .form-item__label,
+.ui-dialog .ui-dialog-content .form-type-boolean label,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox .form-item__label,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox label {
+  order: 2;
+  margin-bottom: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.ui-dialog .ui-dialog-content .form-item--checkbox .form-item__description,
+.ui-dialog .ui-dialog-content .form-item--checkbox .description,
+.ui-dialog .ui-dialog-content .form-type-checkbox .form-item__description,
+.ui-dialog .ui-dialog-content .form-type-checkbox .description,
+.ui-dialog .ui-dialog-content .form-type-boolean .form-item__description,
+.ui-dialog .ui-dialog-content .form-type-boolean .description,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox .form-item__description,
+.ui-dialog .ui-dialog-content .js-form-type-checkbox .description {
+  order: 3;
+  width: 100%;
+  flex-basis: 100%;
+  margin-top: 0.25rem;
+  margin-left: 0;
+  padding-left: calc(20px + 0.75rem);
+}
+.ui-dialog .ui-dialog-content .olivero-details,
+.ui-dialog .ui-dialog-content details {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.ui-dialog .ui-dialog-content .olivero-details summary,
+.ui-dialog .ui-dialog-content .olivero-details .olivero-details__summary,
+.ui-dialog .ui-dialog-content details summary,
+.ui-dialog .ui-dialog-content details .olivero-details__summary {
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f9fafb;
+  border-radius: 8px 8px 0 0;
+}
+.ui-dialog .ui-dialog-content .olivero-details .olivero-details__wrapper,
+.ui-dialog .ui-dialog-content details .olivero-details__wrapper {
+  padding: 1rem;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-radius: 0 0 12px 12px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.button--primary, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:first-child {
+  background: #293A80;
+  border: 1px solid #293A80;
+  color: #ffffff;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.button--primary:hover, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:first-child:hover {
+  background: #212E66;
+  border-color: #212E66;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.button--secondary, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:not(:first-child) {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.button--secondary:hover, .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:not(:first-child):hover {
+  background: #f3f4f6;
+}
+.ui-dialog .form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+.ui-dialog .form-actions .button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ui-dialog .form-actions .button--primary {
+  background: #293A80;
+  border: 1px solid #293A80;
+  color: #ffffff;
+}
+.ui-dialog .form-actions .button--primary:hover {
+  background: #212E66;
+  border-color: #212E66;
 }
 
 /*# sourceMappingURL=style.css.map */
