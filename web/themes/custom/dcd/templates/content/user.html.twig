@@ -4,7 +4,7 @@
  * DCD theme override to present all user data.
  */
 #}
-<article{{ attributes.addClass('user-profile') }}>
+<article{{ attributes.addClass('user-profile user-profile--page') }}>
   
   {# Tab navigation #}
   <div class="user-profile-tabs">
@@ -18,7 +18,12 @@
     <div class="profile-section">
       <div class="section-header">
         <h2>My profile</h2>
-        <a href="{{ path('entity.user.edit_form', {'user': user.id}) }}" class="edit-button">
+        <a
+          href="{{ path('entity.user.edit_form', {'user': user.id}) }}"
+          class="edit-button use-ajax"
+          data-dialog-type="modal"
+          data-dialog-options="{&quot;width&quot;:700}"
+        >
           Edit
         </a>
       </div>

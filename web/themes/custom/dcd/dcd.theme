@@ -204,24 +204,3 @@ function dcd_preprocess_views_view__user_paper_listing__page_1(array &$variables
     }
   }
 }
-
-/**
- * Implements hook_form_alter().
- */
-function dcd_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  // Handle papers node form.
-  if ($form_id === 'node_papers_form') {
-    // Hide moderation state from authenticated users and set default.
-    if (isset($form['moderation_state'])) {
-      $form['moderation_state']['#access'] = FALSE;
-
-      // Set default moderation state value.
-      $form_object = $form_state->getFormObject();
-      $node = $form_object->getEntity();
-
-      if ($node->isNew()) {
-        $node->set('moderation_state', 'draft');
-      }
-    }
-  }
-}
