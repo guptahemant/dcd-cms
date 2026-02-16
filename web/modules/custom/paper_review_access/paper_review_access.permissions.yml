@@ -1,0 +1,7 @@
+view any review content:
+  title: 'View any review content'
+  description: 'Allow users to view all review nodes regardless of authorship.'
+
+view own review content:
+  title: 'View own review content'
+  description: 'Allow users to view only their own review nodes.'

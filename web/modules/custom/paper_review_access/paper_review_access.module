@@ -14,26 +14,31 @@ use Drupal\node\NodeInterface;
  * Implements hook_node_access().
  *
  * Restricts view access on Review nodes:
- * - Track team Leads can view any review.
- * - All other users can only view their own reviews.
+ * - Users with 'view any review content' permission can view all reviews.
+ * - Users with 'view own review content' permission can only view their own.
  */
 function paper_review_access_node_access(NodeInterface $node, string $op, AccountInterface $account): AccessResult {
   if ($node->bundle() !== 'review' || $op !== 'view') {
     return AccessResult::neutral();
   }
 
-  // Leads can view all reviews.
-  if (in_array('track_team_lead', $account->getRoles(), TRUE)) {
+  // Users with 'view any review content' can see all reviews.
+  if ($account->hasPermission('view any review content')) {
     return AccessResult::allowed()
-      ->addCacheContexts(['user.roles'])
+      ->addCacheContexts(['user.permissions'])
       ->addCacheableDependency($node);
   }
 
-  // Members and others can only view their own reviews.
-  $is_owner = (int) $node->getOwnerId() === (int) $account->id();
-  return AccessResult::forbiddenIf(!$is_owner, 'Users may only view their own reviews.')
-    ->addCacheContexts(['user'])
-    ->addCacheableDependency($node);
+  // Users with 'view own review content' can only see their own.
+  if ($account->hasPermission('view own review content')) {
+    $is_owner = (int) $node->getOwnerId() === (int) $account->id();
+    return AccessResult::forbiddenIf(!$is_owner, 'Users may only view their own reviews.')
+      ->addCacheContexts(['user'])
+      ->addCacheableDependency($node);
+  }
+
+  return AccessResult::neutral()
+    ->addCacheContexts(['user.permissions']);
 }
 
 /**

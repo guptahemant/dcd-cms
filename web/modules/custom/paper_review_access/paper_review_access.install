@@ -14,12 +14,14 @@ function paper_review_access_install(): void {
     'track_team_member' => [
       'create review content',
       'edit own review content',
+      'view own review content',
     ],
     'track_team_lead' => [
       'create review content',
       'edit own review content',
       'edit any review content',
       'delete any review content',
+      'view any review content',
     ],
   ];
 
@@ -50,6 +52,8 @@ function paper_review_access_uninstall(): void {
     'edit own review content',
     'edit any review content',
     'delete any review content',
+    'view any review content',
+    'view own review content',
   ];
 
   /** @var \Drupal\user\RoleStorageInterface $role_storage */

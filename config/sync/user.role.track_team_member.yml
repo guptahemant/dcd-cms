@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.review
     - workflows.workflow.basic_editorial
   module:
     - comment
     - content_moderation
     - field_permissions
     - node
+    - paper_review_access
 id: track_team_member
 label: 'Track team Member'
 weight: 7
@@ -23,3 +25,4 @@ permissions:
   - 'post comments'
   - 'use basic_editorial transition publish'
   - 'view own field_rating'
+  - 'view own review content'

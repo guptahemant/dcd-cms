@@ -139,10 +139,11 @@ class AddReviewFormBlock extends BlockBase implements ContainerFactoryPluginInte
       return AccessResult::forbidden();
     }
 
-    // Only members see the form, not leads.
-    if (in_array('track_team_lead', $account->getRoles(), TRUE)) {
+    // Only users who can view their own reviews (members) see the form.
+    // Users with 'view any review content' (leads) should not see it.
+    if ($account->hasPermission('view any review content')) {
       return AccessResult::forbidden()
-        ->addCacheContexts(['user.roles', 'route']);
+        ->addCacheContexts(['user.permissions', 'route']);
     }
 
     return AccessResult::allowedIfHasPermission($account, 'create review content')
