@@ -9,7 +9,7 @@ dependencies:
 id: dcd_pagetitle
 theme: dcd
 region: content
-weight: -5
+weight: -7
 provider: null
 plugin: page_title_block
 settings:

@@ -10,7 +10,7 @@ dependencies:
 id: dcd_addreviewform
 theme: dcd
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: add_review_form
 settings:
