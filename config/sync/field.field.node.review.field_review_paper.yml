@@ -1,0 +1,30 @@
+uuid: e091f5b9-74b3-411e-9b25-b6e83ff769e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_paper
+    - node.type.papers
+    - node.type.review
+_core:
+  default_config_hash: JIQYzSI0im2xMuT6Ws0N0y7Z0DDeOcwsTuEGHQnCcCQ
+id: node.review.field_review_paper
+field_name: field_review_paper
+entity_type: node
+bundle: review
+label: Paper
+description: 'The paper being reviewed.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      papers: papers
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

@@ -813,4 +813,337 @@ footer .region--bottom-footer .block-social-media-links ul.platforms li a:hover 
   box-shadow: 0 2px 8px rgba(16, 24, 40, 0.1);
 }
 
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table, .path-rating-dashboard .views-table,
+.path-my-reviews .views-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #D2EBF7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table thead tr,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table thead tr, .path-rating-dashboard .views-table thead tr,
+.path-my-reviews .views-table thead tr {
+  background: #293A80;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table thead tr th,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table thead tr th, .path-rating-dashboard .views-table thead tr th,
+.path-my-reviews .views-table thead tr th {
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid #212E66;
+  white-space: nowrap;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table thead tr th a,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table thead tr th a, .path-rating-dashboard .views-table thead tr th a,
+.path-my-reviews .views-table thead tr th a {
+  color: #fff;
+  text-decoration: none;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table thead tr th a:hover,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table thead tr th a:hover, .path-rating-dashboard .views-table thead tr th a:hover,
+.path-my-reviews .views-table thead tr th a:hover {
+  text-decoration: underline;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody tr,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody tr, .path-rating-dashboard .views-table tbody tr,
+.path-my-reviews .views-table tbody tr {
+  border-bottom: 1px solid #D2EBF7;
+  transition: background 0.15s ease;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody tr:last-child,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody tr:last-child, .path-rating-dashboard .views-table tbody tr:last-child,
+.path-my-reviews .views-table tbody tr:last-child {
+  border-bottom: none;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody tr:hover,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody tr:hover, .path-rating-dashboard .views-table tbody tr:hover,
+.path-my-reviews .views-table tbody tr:hover {
+  background: rgba(210, 235, 247, 0.3);
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody td,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody td, .path-rating-dashboard .views-table tbody td,
+.path-my-reviews .views-table tbody td {
+  padding: 12px 16px;
+  color: #2F3941;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody td a,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody td a, .path-rating-dashboard .views-table tbody td a,
+.path-my-reviews .views-table tbody td a {
+  color: #293A80;
+  text-decoration: none;
+  font-weight: 500;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table tbody td a:hover,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table tbody td a:hover, .path-rating-dashboard .views-table tbody td a:hover,
+.path-my-reviews .views-table tbody td a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .page-node-type-papers .block-views-blockpaper-reviews-block-lead .views-table,
+  .page-node-type-papers .block-views-blockpaper-reviews-block-member .views-table, .path-rating-dashboard .views-table,
+  .path-my-reviews .views-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.rating-section__title {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #2F3941;
+  margin: 0 0 4px;
+}
+
+.rating-section__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #656565;
+  margin: 0 0 20px;
+}
+
+.path-rating-dashboard .region--content.layout--pass--content-medium,
+.path-my-reviews .region--content.layout--pass--content-medium {
+  display: block;
+}
+.path-rating-dashboard .block-system-main-block,
+.path-my-reviews .block-system-main-block {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 1rem 120px;
+}
+@media (max-width: 768px) {
+  .path-rating-dashboard .block-system-main-block,
+  .path-my-reviews .block-system-main-block {
+    padding: 40px 1rem 80px;
+  }
+}
+.path-rating-dashboard .views-exposed-form,
+.path-my-reviews .views-exposed-form {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #D2EBF7;
+  border-radius: 8px;
+}
+.path-rating-dashboard .views-exposed-form .form--inline,
+.path-my-reviews .views-exposed-form .form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+.path-rating-dashboard .views-exposed-form .form-item,
+.path-my-reviews .views-exposed-form .form-item {
+  flex: 1 1 180px;
+  min-width: 150px;
+}
+.path-rating-dashboard .views-exposed-form .form-item label,
+.path-my-reviews .views-exposed-form .form-item label {
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #656565;
+  margin-bottom: 6px;
+}
+.path-rating-dashboard .views-exposed-form .form-item input[type=text],
+.path-rating-dashboard .views-exposed-form .form-item input[type=number],
+.path-rating-dashboard .views-exposed-form .form-item select,
+.path-my-reviews .views-exposed-form .form-item input[type=text],
+.path-my-reviews .views-exposed-form .form-item input[type=number],
+.path-my-reviews .views-exposed-form .form-item select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  color: #2F3941;
+  border: 1px solid #C2C8CC;
+  border-radius: 6px;
+  background: #fff;
+  appearance: auto;
+}
+.path-rating-dashboard .views-exposed-form .form-item input[type=text]:focus,
+.path-rating-dashboard .views-exposed-form .form-item input[type=number]:focus,
+.path-rating-dashboard .views-exposed-form .form-item select:focus,
+.path-my-reviews .views-exposed-form .form-item input[type=text]:focus,
+.path-my-reviews .views-exposed-form .form-item input[type=number]:focus,
+.path-my-reviews .views-exposed-form .form-item select:focus {
+  outline: none;
+  border-color: #293A80;
+  box-shadow: 0 0 0 2px rgba(41, 58, 128, 0.15);
+}
+.path-rating-dashboard .views-exposed-form .form-actions,
+.path-my-reviews .views-exposed-form .form-actions {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.path-rating-dashboard .views-exposed-form .form-actions .button,
+.path-my-reviews .views-exposed-form .form-actions .button {
+  height: 40px;
+  padding: 0 20px;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 99px;
+  border: none;
+  cursor: pointer;
+}
+.path-rating-dashboard .views-exposed-form .form-actions .form-submit,
+.path-my-reviews .views-exposed-form .form-actions .form-submit {
+  background: #293A80;
+  color: #fff;
+}
+.path-rating-dashboard .views-exposed-form .form-actions .form-submit:hover,
+.path-my-reviews .views-exposed-form .form-actions .form-submit:hover {
+  background: #212E66;
+}
+.path-rating-dashboard .views-exposed-form .form-actions input[value=Reset],
+.path-my-reviews .views-exposed-form .form-actions input[value=Reset] {
+  background: transparent;
+  color: #656565;
+  border: 1px solid #C2C8CC;
+}
+.path-rating-dashboard .views-exposed-form .form-actions input[value=Reset]:hover,
+.path-my-reviews .views-exposed-form .form-actions input[value=Reset]:hover {
+  border-color: #2F3941;
+  color: #2F3941;
+}
+.path-rating-dashboard .views-table,
+.path-my-reviews .views-table {
+  margin-bottom: 48px;
+}
+.path-rating-dashboard .attachment,
+.path-my-reviews .attachment {
+  margin-bottom: 16px;
+}
+.path-rating-dashboard .field--type-starrating,
+.path-my-reviews .field--type-starrating {
+  display: inline-flex;
+  gap: 2px;
+}
+.path-rating-dashboard .pager,
+.path-my-reviews .pager {
+  margin-top: 24px;
+}
+.path-rating-dashboard .pager .pager__items,
+.path-my-reviews .pager .pager__items {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.path-rating-dashboard .pager .pager__item a,
+.path-rating-dashboard .pager .pager__item--current,
+.path-my-reviews .pager .pager__item a,
+.path-my-reviews .pager .pager__item--current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.path-rating-dashboard .pager .pager__item a,
+.path-my-reviews .pager .pager__item a {
+  color: #293A80;
+  border: 1px solid #D2EBF7;
+}
+.path-rating-dashboard .pager .pager__item a:hover,
+.path-my-reviews .pager .pager__item a:hover {
+  background: #293A80;
+  color: #fff;
+  border-color: #293A80;
+}
+.path-rating-dashboard .pager .pager__item--current,
+.path-my-reviews .pager .pager__item--current {
+  background: #293A80;
+  color: #fff;
+  font-weight: 600;
+}
+
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg {
+  margin: 32px 0;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg .views-row {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 20px 24px;
+  background: #D2EBF7;
+  border-radius: 8px;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg .views-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg .avg-rating__value {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #293A80;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg .avg-rating__count {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #2F3941;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-avg .avg-rating__label {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #656565;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member {
+  margin: 24px 0 48px;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead > h2,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member > h2 {
+  font-family: "Geist", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #2F3941;
+  margin: 0 0 16px;
+}
+.page-node-type-papers .block-views-blockpaper-reviews-block-lead .field--type-starrating,
+.page-node-type-papers .block-views-blockpaper-reviews-block-member .field--type-starrating {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.view-rating-dashboard {
+  gap: 0;
+}
+.view-rating-dashboard .view-content {
+  gap: 0;
+  overflow: auto;
+}
+
 /*# sourceMappingURL=style.css.map */

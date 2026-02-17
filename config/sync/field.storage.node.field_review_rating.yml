@@ -1,0 +1,21 @@
+uuid: 6dd7b903-0fd2-48e4-9019-0d312f3c27fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - starrating
+_core:
+  default_config_hash: wVd-ZKJrd54ci1DhPubRFmDa1NPLsPg4b_r-uUf5o0g
+id: node.field_review_rating
+field_name: field_review_rating
+entity_type: node
+type: starrating
+settings: {  }
+module: starrating
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

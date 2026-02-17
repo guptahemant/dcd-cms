@@ -1,0 +1,28 @@
+uuid: 0e23101d-9f6e-45c8-89e5-101bae93d7a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paper_review_access
+  theme:
+    - dcd
+id: dcd_addreviewform
+theme: dcd
+region: content
+weight: -2
+provider: null
+plugin: add_review_form
+settings:
+  id: add_review_form
+  label: 'Add Review'
+  label_display: visible
+  provider: paper_review_access
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      papers: papers

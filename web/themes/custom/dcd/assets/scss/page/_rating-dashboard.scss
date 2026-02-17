@@ -1,0 +1,348 @@
+@use '../abstracts/variables' as *;
+
+// =============================================
+// Shared review table styles (mixin)
+// =============================================
+%review-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-primary;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid $blue-50;
+  border-radius: 8px;
+  overflow: hidden;
+
+  thead tr {
+    background: $cyan-400;
+
+    th {
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 2px solid $cyan-500;
+      white-space: nowrap;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $blue-50;
+      transition: background 0.15s ease;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: rgba($blue-50, 0.3);
+      }
+    }
+
+    td {
+      padding: 12px 16px;
+      color: $text-grey;
+      vertical-align: middle;
+      line-height: 1.5;
+
+      a {
+        color: $cyan-400;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// =============================================
+// Section headings
+// =============================================
+.rating-section__title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  color: $text-grey;
+  margin: 0 0 4px;
+}
+
+.rating-section__desc {
+  font-family: $font-tertiary;
+  font-size: 14px;
+  color: $text-muted;
+  margin: 0 0 20px;
+}
+
+// =============================================
+// Rating Dashboard & My Reviews pages
+// =============================================
+.path-rating-dashboard,
+.path-my-reviews {
+
+  .region--content.layout--pass--content-medium {
+    display: block;
+  }
+
+  .block-system-main-block {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 1rem 120px;
+
+    @media (max-width: 768px) {
+      padding: 40px 1rem 80px;
+    }
+  }
+
+  // Exposed filters
+  .views-exposed-form {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid $blue-50;
+    border-radius: 8px;
+
+    .form--inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+    }
+
+    .form-item {
+      flex: 1 1 180px;
+      min-width: 150px;
+
+      label {
+        display: block;
+        font-family: $font-primary;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: $text-muted;
+        margin-bottom: 6px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: 100%;
+        height: 40px;
+        padding: 0 12px;
+        font-family: $font-primary;
+        font-size: 14px;
+        color: $text-grey;
+        border: 1px solid #C2C8CC;
+        border-radius: 6px;
+        background: #fff;
+        appearance: auto;
+
+        &:focus {
+          outline: none;
+          border-color: $cyan-400;
+          box-shadow: 0 0 0 2px rgba($cyan-400, 0.15);
+        }
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 8px;
+      flex: 0 0 auto;
+
+      .button {
+        height: 40px;
+        padding: 0 20px;
+        font-family: $font-primary;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 99px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .form-submit {
+        background: $cyan-400;
+        color: #fff;
+
+        &:hover {
+          background: $cyan-500;
+        }
+      }
+
+      input[value="Reset"] {
+        background: transparent;
+        color: $text-muted;
+        border: 1px solid #C2C8CC;
+
+        &:hover {
+          border-color: $text-grey;
+          color: $text-grey;
+        }
+      }
+    }
+  }
+
+  // Tables
+  .views-table {
+    @extend %review-table;
+    margin-bottom: 48px;
+  }
+
+  // Attachment display spacing
+  .attachment {
+    margin-bottom: 16px;
+  }
+
+  // Star rating display in table cells
+  .field--type-starrating {
+    display: inline-flex;
+    gap: 2px;
+  }
+
+  // Pager styling
+  .pager {
+    margin-top: 24px;
+
+    .pager__items {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pager__item a,
+    .pager__item--current {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 36px;
+      padding: 0 8px;
+      font-family: $font-primary;
+      font-size: 14px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .pager__item a {
+      color: $cyan-400;
+      border: 1px solid $blue-50;
+
+      &:hover {
+        background: $cyan-400;
+        color: #fff;
+        border-color: $cyan-400;
+      }
+    }
+
+    .pager__item--current {
+      background: $cyan-400;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+// =============================================
+// Paper detail page — review blocks
+// =============================================
+.page-node-type-papers {
+
+  // Average rating block
+  .block-views-blockpaper-reviews-block-avg {
+    margin: 32px 0;
+
+    .views-row {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      padding: 20px 24px;
+      background: $bg-blue;
+      border-radius: 8px;
+    }
+
+    .views-field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avg-rating__value {
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 28px;
+      color: $cyan-400;
+    }
+
+    .avg-rating__count {
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 28px;
+      color: $text-grey;
+    }
+
+    .avg-rating__label {
+      font-family: $font-tertiary;
+      font-size: 14px;
+      color: $text-muted;
+    }
+  }
+
+  // Review list tables (lead + member blocks)
+  .block-views-blockpaper-reviews-block-lead,
+  .block-views-blockpaper-reviews-block-member {
+    margin: 24px 0 48px;
+
+    > h2 {
+      font-family: $font-primary;
+      font-weight: 700;
+      font-size: 20px;
+      color: $text-grey;
+      margin: 0 0 16px;
+    }
+
+    .views-table {
+      @extend %review-table;
+    }
+
+    .field--type-starrating {
+      display: inline-flex;
+      gap: 2px;
+    }
+  }
+}
+
+.view-rating-dashboard {
+  gap: 0;
+  .view-content {
+    gap: 0;
+    overflow: auto;
+  }
+}

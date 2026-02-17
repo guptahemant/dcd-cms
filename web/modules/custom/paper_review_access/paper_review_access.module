@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Enforces per-user review visibility and one-review-per-paper constraint.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_access().
+ *
+ * Restricts view access on Review nodes:
+ * - Users with 'view any review content' permission can view all reviews.
+ * - Users with 'view own review content' permission can only view their own.
+ */
+function paper_review_access_node_access(NodeInterface $node, string $op, AccountInterface $account): AccessResult {
+  if ($node->bundle() !== 'review' || $op !== 'view') {
+    return AccessResult::neutral();
+  }
+
+  // Users with 'view any review content' can see all reviews.
+  if ($account->hasPermission('view any review content')) {
+    return AccessResult::allowed()
+      ->addCacheContexts(['user.permissions'])
+      ->addCacheableDependency($node);
+  }
+
+  // Users with 'view own review content' can only see their own.
+  if ($account->hasPermission('view own review content')) {
+    $is_owner = (int) $node->getOwnerId() === (int) $account->id();
+    return AccessResult::forbiddenIf(!$is_owner, 'Users may only view their own reviews.')
+      ->addCacheContexts(['user'])
+      ->addCacheableDependency($node);
+  }
+
+  return AccessResult::neutral()
+    ->addCacheContexts(['user.permissions']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for node_review_form.
+ *
+ * Hides the title field and enforces one review per user per paper.
+ */
+function paper_review_access_form_node_review_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  // Hide the title field — it will be auto-generated on save.
+  if (isset($form['title'])) {
+    $form['title']['#access'] = FALSE;
+  }
+
+  // If paper is pre-populated (embedded form on paper page), hide the field.
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->isNew() && !$node->get('field_review_paper')->isEmpty()) {
+    $form['field_review_paper']['#access'] = FALSE;
+  }
+
+  $form['#validate'][] = '_paper_review_access_validate_unique_review';
+}
+
+/**
+ * Validation callback: ensures one review per user per paper.
+ */
+function _paper_review_access_validate_unique_review(array &$form, FormStateInterface $form_state): void {
+  $paper_values = $form_state->getValue('field_review_paper');
+  $paper_id = $paper_values[0]['target_id'] ?? NULL;
+  if (!$paper_id) {
+    return;
+  }
+
+  $uid = \Drupal::currentUser()->id();
+
+  // Check if the current user already has a review for this paper.
+  $existing = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->getQuery()
+    ->accessCheck(FALSE)
+    ->condition('type', 'review')
+    ->condition('uid', $uid)
+    ->condition('field_review_paper', $paper_id)
+    ->count()
+    ->execute();
+
+  if ($existing > 0) {
+    $form_state->setErrorByName('field_review_paper', t('You have already submitted a review for this paper. Please edit your existing review instead.'));
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for node_review_edit_form.
+ *
+ * Hides title and prevents changing the paper reference on existing reviews.
+ */
+function paper_review_access_form_node_review_edit_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  if (isset($form['title'])) {
+    $form['title']['#access'] = FALSE;
+  }
+  if (isset($form['field_review_paper'])) {
+    $form['field_review_paper']['#disabled'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave() for node entities.
+ *
+ * Auto-generates the title for Review nodes.
+ */
+function paper_review_access_node_presave(NodeInterface $node): void {
+  if ($node->bundle() !== 'review') {
+    return;
+  }
+
+  $paper_id = $node->get('field_review_paper')->target_id;
+  $paper_title = '';
+  if ($paper_id) {
+    $paper = \Drupal::entityTypeManager()->getStorage('node')->load($paper_id);
+    if ($paper) {
+      $paper_title = $paper->label();
+    }
+  }
+
+  $author = $node->getOwner();
+  $author_name = $author ? $author->getDisplayName() : 'Unknown';
+
+  $node->setTitle("Review of {$paper_title} by {$author_name}");
+}

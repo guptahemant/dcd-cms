@@ -1,0 +1,47 @@
+uuid: 2c803dc1-eafc-4ddb-9bb3-6baf9a81f63f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.review.field_review_comment
+    - field.field.node.review.field_review_paper
+    - field.field.node.review.field_review_rating
+    - node.type.review
+  module:
+    - starrating
+    - text
+    - user
+_core:
+  default_config_hash: DrtqnCdclSEPmJZsW_fqUX1Akw0xvRw6-ls-R_500Ak
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  field_review_comment:
+    type: text_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_review_paper:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_review_rating:
+    type: starrating
+    weight: 1
+    region: content
+    label: above
+    settings:
+      fill_blank: 1
+      icon_type: star
+      icon_color: 1
+    third_party_settings: {  }
+hidden:
+  links: true

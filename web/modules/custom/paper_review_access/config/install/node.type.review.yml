@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {}
+name: Review
+type: review
+description: 'A review of a paper submission, containing a star rating and comment.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

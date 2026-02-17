@@ -1,0 +1,80 @@
+uuid: 2a84e6fd-030e-4140-ada5-2b513253b671
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.review.field_review_comment
+    - field.field.node.review.field_review_paper
+    - field.field.node.review.field_review_rating
+    - node.type.review
+  module:
+    - content_moderation
+    - starrating
+    - text
+_core:
+  default_config_hash: qjakRqaQrZk128xEV6KiXmyiHXp-XH0N9V4kAieHhss
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  field_review_comment:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Enter your review comments...'
+    third_party_settings: {  }
+  field_review_paper:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Search for a paper...'
+    third_party_settings: {  }
+  field_review_rating:
+    type: starrating
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 99
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  publish_on: true
+  publish_state: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true

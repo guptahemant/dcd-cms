@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall hooks for Paper Review Access module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function paper_review_access_install(): void {
+  // Grant permissions to Track team roles.
+  $role_permissions = [
+    'track_team_member' => [
+      'create review content',
+      'edit own review content',
+      'view own review content',
+    ],
+    'track_team_lead' => [
+      'create review content',
+      'edit own review content',
+      'edit any review content',
+      'delete any review content',
+      'view any review content',
+    ],
+  ];
+
+  /** @var \Drupal\user\RoleStorageInterface $role_storage */
+  $role_storage = \Drupal::entityTypeManager()->getStorage('user_role');
+
+  foreach ($role_permissions as $role_id => $permissions) {
+    /** @var \Drupal\user\RoleInterface|null $role */
+    $role = $role_storage->load($role_id);
+    if ($role) {
+      foreach ($permissions as $permission) {
+        $role->grantPermission($permission);
+      }
+      $role->save();
+    }
+  }
+
+  \Drupal::messenger()->addMessage(t('Paper Review Access: Review content type created and permissions granted to Track team roles.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function paper_review_access_uninstall(): void {
+  // Revoke permissions from Track team roles.
+  $permissions = [
+    'create review content',
+    'edit own review content',
+    'edit any review content',
+    'delete any review content',
+    'view any review content',
+    'view own review content',
+  ];
+
+  /** @var \Drupal\user\RoleStorageInterface $role_storage */
+  $role_storage = \Drupal::entityTypeManager()->getStorage('user_role');
+
+  foreach (['track_team_member', 'track_team_lead'] as $role_id) {
+    /** @var \Drupal\user\RoleInterface|null $role */
+    $role = $role_storage->load($role_id);
+    if ($role) {
+      foreach ($permissions as $permission) {
+        $role->revokePermission($permission);
+      }
+      $role->save();
+    }
+  }
+}
