@@ -49,7 +49,7 @@ content:
     region: content
   field_designation:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -76,7 +76,7 @@ content:
     region: content
   field_speaker_name:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -91,3 +91,4 @@ content:
     weight: 0
     region: content
 hidden: {  }
+

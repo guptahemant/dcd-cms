@@ -5,8 +5,6 @@ dependencies:
   config:
     - dashboard.dashboard.welcome
     - filter.format.webform_default
-    - node.type.papers
-    - node.type.person
     - workflows.workflow.basic_editorial
   module:
     - captcha
@@ -31,11 +29,7 @@ permissions:
   - 'access coffee'
   - 'access content'
   - 'bypass honeypot protection'
-  - 'create papers content'
   - 'delete own files'
-  - 'edit any papers content'
-  - 'edit own papers content'
-  - 'edit own person content'
   - 'skip CAPTCHA'
   - 'update own profile profile'
   - 'use basic_editorial transition create_new_draft'
@@ -49,3 +43,4 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished profile'
   - 'view welcome dashboard'
+

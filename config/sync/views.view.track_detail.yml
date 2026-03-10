@@ -439,7 +439,7 @@ display:
         type: normal
         title: 'Session Tracks'
         description: ''
-        weight: 0
+        weight: -45
         expanded: false
         menu_name: main
         parent: ''
@@ -453,3 +453,4 @@ display:
         - 'config:field.storage.taxonomy_term.field_target_audience'
         - 'config:field.storage.taxonomy_term.field_track_goals'
         - 'config:field.storage.taxonomy_term.field_track_keyword'
+
